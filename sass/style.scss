@@ -7,7 +7,7 @@
 body {
   font-size: 16px;
   min-width: 350px;
-}
+  }
 
 .loading_spinner {
   height: 60px;
@@ -20,8 +20,9 @@ header {
   width: 100%;
   background-color: $background-color-light;
   @include flex_column;
+  padding: 20px 40px;
 }
-.header_logo {
+.nav_logo {
   width: 200px;
   margin: 20px auto;
   display: block;
@@ -42,10 +43,13 @@ header {
   @extend.btn_action_explorer;
 }
 figure {
+  margin: 0;
   img {
     height: 200px;
     width: 100%;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 }
 ul {
@@ -59,6 +63,7 @@ i {
   font-size: 25px;
 }
 .restaurants {
+  row-gap: 20px;
   @extend header;
 }
 h2 {
@@ -73,6 +78,7 @@ figcaption {
   .details_figcaption {
     @include flex_column;
   }
+
   h3 {
     margin-bottom: 0;
     padding-left: 20px;
@@ -80,5 +86,12 @@ figcaption {
   i {
     margin-top: 20px;
     margin-right: 20px;
+  }
+}
+footer {
+  color: white;
+  background-color: $background-color-dark;
+  a, img {
+    color:white;
   }
 }
