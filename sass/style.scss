@@ -1,0 +1,48 @@
+@import "./base/base";
+@import "./base/typography";
+@import "./utils/variables";
+@import "./components/buttons";
+@import "./utils/mixins";
+
+body {
+  font-size: 16px;
+  min-width: 350px;
+}
+
+.loading_spinner {
+  height: 60px;
+  width: 60px;
+  border: 2px solid $colour-primary;
+  border-radius: 50%;
+}
+header {
+  width: 100%;
+  background-color: $background-colour-light;
+}
+.header_logo {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+.location_icon,
+i {
+  height: 40px;
+  width: 40px;
+  color: black;
+}
+.btn_action_explorer {
+  height: 50px;
+  width: 220px;
+  background: linear-gradient(to left top, $colour-primary, $colour-secondary);
+  color: white;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+.btn_action_commander {
+  @extend.btn_action_explorer;
+}
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}

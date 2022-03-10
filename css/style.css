@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo .titre {
+  font-family: "Shrikhand", cursive;
+}
+
+body {
+  font-size: 16px;
+  min-width: 350px;
+}
+
+.loading_spinner {
+  height: 60px;
+  width: 60px;
+  border: 2px solid #9356dc;
+  border-radius: 50%;
+}
+
+header {
+  width: 100%;
+  background-color: #dcdcdc;
+}
+
+.header_logo {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.location_icon,
+i {
+  height: 40px;
+  width: 40px;
+  color: black;
+}
+
+.btn_action_explorer, .btn_action_commander {
+  height: 50px;
+  width: 220px;
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  color: white;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
