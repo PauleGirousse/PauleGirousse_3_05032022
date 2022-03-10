@@ -12,37 +12,73 @@ body {
 .loading_spinner {
   height: 60px;
   width: 60px;
-  border: 2px solid $colour-primary;
+  border: 2px solid $color-primary;
   border-radius: 50%;
 }
+
 header {
   width: 100%;
-  background-color: $background-colour-light;
+  background-color: $background-color-light;
+  @include flex_column;
 }
 .header_logo {
   width: 200px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: block;
 }
-.location_icon,
-i {
-  height: 40px;
-  width: 40px;
-  color: black;
-}
+
 .btn_action_explorer {
   height: 50px;
   width: 220px;
-  background: linear-gradient(to left top, $colour-primary, $colour-secondary);
+  background: linear-gradient(to left top, $color-primary, $color-secondary);
   color: white;
   border-radius: 50px;
   margin: 0 auto;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .btn_action_commander {
   @extend.btn_action_explorer;
 }
-img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+figure {
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+i {
+  font-size: 25px;
+}
+.restaurants {
+  @extend header;
+}
+h2 {
+  align-self: flex-start;
+}
+figcaption {
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  @include flex_row;
+  justify-content: space-between;
+  .details_figcaption {
+    @include flex_column;
+  }
+  h3 {
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  i {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
 }

@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+    <!-- LOADING SPINNER -->
     <div class="loading_spinner"></div>
 
     <!-- BARRE DE NAVIGATION -->
@@ -31,7 +33,7 @@
     <!-- FORMULAIRE -->
         
         <form class="form" method="post" action="traitement.php">
-            <i class="fas fa-solid fa-location-dot location_icon"></i>
+            <i class="fas fa-map-marker-alt"></i>
             
             <input type="text" class="ville" name="ville" id="ville">
         </form>
@@ -49,9 +51,9 @@
         <section class="fonctionnement">
             <h2>Fonctionnement</h2>
             <ol>
-                <li class="choisir"><i class="fas fa-solid fa-mobile-screen-button"></i><span>Choisissez un restaurant</span></li> 
-                <li class="composer"><i class="fas fa-solid fa-list"></i><span>Composez votre menu</span></li>
-                <li class="deguster"><i class="fas fa-solid fa-store"></i><span>Dégustez au restaurant</span></li>
+                <li class="choisir"><i class="fas fa-mobile-alt"></i><span>Choisissez un restaurant</span></li> 
+                <li class="composer"><i class="fas fa-list-ul"></i><span>Composez votre menu</span></li>
+                <li class="deguster"><i class="fas fa-store"></i><span>Dégustez au restaurant</span></li>
             </ol>
         </section>
 
@@ -65,9 +67,11 @@
                     <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="table de restaurant"/>
                 </figure>
                 <figcaption>
-                    <h3>La palette du goût</h3>
-                    <i class="fas fa-light fa-heart"></i>
-                    <div class="page1_figcaption_lieu"></div>
+                    <div class="details_figcaption">
+                        <h3>La palette du goût</h3>
+                        <span class="page1_figcaption_lieu">Ménilmontant</span>
+                    </div>
+                    <i class="far fa-heart"></i>
                 </figcaption>
             </a>
            
@@ -77,8 +81,8 @@
                 </figure>
                 <figcaption>
                     <h3>La note enchantée</h3>
-                    <i class="fas fa-light fa-heart"></i>
-                    <div class="page2_figcaption_lieu"></div>
+                    <i class="far fa-heart"></i>
+                    <div class="page2_figcaption_lieu">Charonne</div>
                 </figcaption>
             </a>
             
@@ -88,8 +92,8 @@
                 </figure>
                 <figcaption>
                     <h3>A la française</h3>
-                    <i class="fas fa-light fa-heart"></i>
-                    <div class="page3_figcaption_lieu"></div>
+                    <i class="far fa-heart"></i>
+                    <div class="page3_figcaption_lieu">Cité Rouge</div>
                 </figcaption>
             </a>
             
@@ -99,8 +103,8 @@
                 </figure>
                 <figcaption>
                     <h3>Le délice des sens</h3>
-                    <i class="fas fa-light fa-heart"></i>
-                    <div class="page4_figcaption_lieu"></div>
+                    <i class="far fa-heart"></i>
+                    <div class="page4_figcaption_lieu">Folie-Méricourt</div>
                 </figcaption>
             </a>
             
@@ -116,11 +120,11 @@
 
         <ul>
             <li>
-                <i class="fas fa-solid fa-utensils"></i>
+                <i class="fas fa-utensils"></i>
                 <a class="footer_lien" href="#">Proposer un restaurant</a>
             </li>
             <li>
-                <i class="fas fa-solid fa-handshake-angle"></i>
+                <i class="fas fa-hands-helping"></i>
                 <a class="footer_lien" href="#">Devenir partenaire</a>
             </li>
             <li><a class="footer_lien" href="#">Mentions légales</a></li>

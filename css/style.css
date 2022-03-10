@@ -31,22 +31,18 @@ body {
   border-radius: 50%;
 }
 
-header {
+header, .restaurants {
   width: 100%;
   background-color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header_logo {
   width: 200px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: block;
-}
-
-.location_icon,
-i {
-  height: 40px;
-  width: 40px;
-  color: black;
 }
 
 .btn_action_explorer, .btn_action_commander {
@@ -57,11 +53,54 @@ i {
   border-radius: 50px;
   margin: 0 auto;
 }
+.btn_action_explorer:hover, .btn_action_commander:hover {
+  cursor: pointer;
+}
 
-img {
+figure img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  font-size: 25px;
+}
+
+h2 {
+  align-self: flex-start;
+}
+
+figcaption {
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+figcaption .details_figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+figcaption h3 {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+figcaption i {
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
