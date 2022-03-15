@@ -158,6 +158,16 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 880px) {
+  .restaurants .sans_titre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 2rem;
+  }
 }
 
 .pages {
@@ -165,9 +175,13 @@ h2 {
   border-bottom-right-radius: 2rem;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
+  width: 48%;
+  min-width: 40.8rem;
   max-width: 58rem;
+  flex-grow: 1;
 }
 .pages figure {
+  width: 100%;
   margin: 0;
   position: relative;
 }
@@ -215,6 +229,9 @@ h2 {
 .pages figcaption h3 {
   font-size: 2.1rem;
   margin-bottom: 0;
+}
+.pages figcaption .page3 h3::first-letter {
+  text-transform: uppercase;
 }
 .pages figcaption span {
   margin-top: 0.5rem;

@@ -134,6 +134,12 @@ h2 {
   .sans_titre {
     width: 100%;
     @include flex_column;
+    align-items: center;
+    @media screen and (min-width: 880px) {
+      @include flex_row;
+      justify-content: space-between;
+      column-gap: 2rem;
+    }
   }
 }
 
@@ -142,8 +148,12 @@ h2 {
   border-bottom-right-radius: 2rem;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
+  width: 48%;
+  min-width: 40.8rem;
   max-width: 58rem;
+  flex-grow: 1;
   figure {
+    width: 100%;
     margin: 0;
     position: relative;
     img {
@@ -187,6 +197,9 @@ h2 {
     h3 {
       font-size: 2.1rem;
       margin-bottom: 0;
+    }
+    .page3 h3::first-letter {
+      text-transform: uppercase;
     }
     span {
       margin-top: 0.5rem;
