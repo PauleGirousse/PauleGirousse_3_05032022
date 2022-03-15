@@ -178,6 +178,9 @@ h2 {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
+.pages figure .img_page2 {
+  object-position: 50% 62%;
+}
 .pages figure::after {
   content: "Nouveau";
   height: 3.3rem;
@@ -227,6 +230,10 @@ h2 {
 }
 .pages figcaption .heart_icon:hover {
   background: linear-gradient(to bottom, #9356dc, #ff79da);
+}
+
+.page2_img {
+  object-position: 50% 50%;
 }
 
 footer {

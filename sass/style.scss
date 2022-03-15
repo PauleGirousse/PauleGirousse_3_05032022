@@ -153,6 +153,9 @@ h2 {
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;
     }
+    .img_page2 {
+      object-position: 50% 62%;
+    }
     &::after {
       content: "Nouveau";
       height: 3.3rem;
@@ -206,7 +209,9 @@ h2 {
     }
   }
 }
-
+.page2_img {
+  object-position: 50% 50%;
+}
 footer {
   color: white;
   background-color: lighten($color: black, $amount: 20%);
