@@ -55,7 +55,7 @@ header {
 .btn_action_explorer {
   height: 6rem;
   width: 26rem;
-  background: linear-gradient(to left top, $color-primary, $color-secondary);
+  background: linear-gradient(to top, $color-primary, $color-secondary);
   font-size: 1.8rem;
   color: white;
   border-radius: 5rem;
@@ -155,13 +155,13 @@ h2 {
     }
     &::after {
       content: "Nouveau";
-      height: 3rem;
-      width: 8rem;
+      height: 3.3rem;
+      width: 9.5rem;
+      font-size: 1.7rem;
       font-weight: bold;
-      font-family: $font-family-base;
       color: darken($color-tertiary, 45);
       background-color: darken($color-tertiary, 10);
-      padding-top: 0.8rem;
+      padding-top: 0.7rem;
       text-align: center;
       display: inline-block;
       position: absolute;
@@ -178,12 +178,13 @@ h2 {
     .details_figcaption {
       @include flex_column;
       padding-left: 2rem;
+      margin-top: 0;
     }
     h3 {
       font-size: 2.1rem;
       margin-bottom: 0;
     }
-    p {
+    span {
       margin-top: 0.5rem;
     }
     div {

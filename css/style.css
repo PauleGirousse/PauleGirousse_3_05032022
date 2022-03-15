@@ -72,7 +72,7 @@ header p {
 .btn_action_explorer, .btn_action_commander {
   height: 6rem;
   width: 26rem;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
+  background: linear-gradient(to top, #9356dc, #ff79da);
   font-size: 1.8rem;
   color: white;
   border-radius: 5rem;
@@ -180,13 +180,13 @@ h2 {
 }
 .pages figure::after {
   content: "Nouveau";
-  height: 3rem;
-  width: 8rem;
+  height: 3.3rem;
+  width: 9.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  font-family: "Roboto", sans-serif;
   color: #217460;
   background-color: #71d7be;
-  padding-top: 0.8rem;
+  padding-top: 0.7rem;
   text-align: center;
   display: inline-block;
   position: absolute;
@@ -206,12 +206,13 @@ h2 {
   display: flex;
   flex-direction: column;
   padding-left: 2rem;
+  margin-top: 0;
 }
 .pages figcaption h3 {
   font-size: 2.1rem;
   margin-bottom: 0;
 }
-.pages figcaption p {
+.pages figcaption span {
   margin-top: 0.5rem;
 }
 .pages figcaption div {
