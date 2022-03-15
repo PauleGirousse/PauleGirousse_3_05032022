@@ -14,7 +14,8 @@ body {
   padding: 0;
 }
 
-.logo .titre {
+.logo,
+.titre_pages h3 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -25,6 +26,7 @@ html {
 body {
   font-size: 1.4em;
   min-width: 45rem;
+  max-width: 120rem;
   border: 0.1rem solid red;
 }
 
@@ -43,7 +45,7 @@ body {
 
 header {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -101,7 +103,7 @@ header p {
   background-color: #9356dc;
   border-radius: 50%;
   display: inline-block;
-  margin-left: -0.5em;
+  margin-left: -1em;
   margin-top: 2em;
   text-align: center;
   padding-top: 0.5em;
@@ -110,7 +112,7 @@ header p {
   counter-increment: li;
   height: 8rem;
   min-width: 38rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #f2f2f2;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   border-radius: 2.5rem;
   margin-bottom: 3.5rem;
@@ -118,6 +120,7 @@ header p {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
+  cursor: pointer;
 }
 .fonctionnement ol li p {
   color: rgba(0, 0, 0, 0.5);
@@ -129,7 +132,7 @@ header p {
   padding-left: 2em;
 }
 .fonctionnement ol li:hover {
-  background-color: rgba(147, 86, 220, 0.1);
+  background-color: #e4d5f6;
 }
 .fonctionnement ol li:hover p {
   color: #9356dc;
@@ -146,7 +149,7 @@ h2 {
   padding-right: 2rem;
   padding-bottom: 5rem;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,22 +211,26 @@ h2 {
   font-size: 2.1rem;
   margin-bottom: 0;
 }
-.pages figcaption .figcaption_lieu {
+.pages figcaption p {
+  margin-top: 0.5rem;
+}
+.pages figcaption div {
+  font-weight: 100;
   font-size: 2rem;
   margin: 0.5rem 0 2rem 0;
 }
-.pages figcaption p {
+.pages figcaption .heart_icon {
   font-size: 3rem;
   margin-right: 3rem;
   margin-top: 3rem;
 }
-.pages figcaption p:hover {
+.pages figcaption .heart_icon:hover {
   background: linear-gradient(to bottom, #9356dc, #ff79da);
 }
 
 footer {
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #333333;
   display: flex;
   flex-direction: column;
 }
@@ -254,6 +261,34 @@ li i {
   font-size: 1.4rem;
   color: white;
   margin-right: 2rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+}
+
+.titre_pages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+.titre_pages h3 {
+  font-size: 3rem;
+}
+
+.pages_entrees,
+.pages_plats,
+.pages_desserts {
+  margin: 0 2rem;
+}
+.pages_entrees p,
+.pages_plats p,
+.pages_desserts p {
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */

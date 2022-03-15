@@ -10,6 +10,7 @@ html {
 body {
   font-size: 1.4em;
   min-width: 45rem;
+  max-width: 120rem;
   border: 0.1rem solid red;
 }
 
@@ -28,7 +29,7 @@ body {
 
 header {
   width: 100%;
-  background-color: $background-color-light;
+  background-color: lighten($color: black, $amount: 95%);
   @include flex_column;
   align-items: stretch;
   form {
@@ -82,7 +83,7 @@ header {
       background-color: $color-primary;
       border-radius: 50%;
       display: inline-block;
-      margin-left: -0.5em;
+      margin-left: -1em;
       margin-top: 2em;
       text-align: center;
       padding-top: 0.5em;
@@ -91,13 +92,13 @@ header {
       counter-increment: li;
       height: 8rem;
       min-width: 38rem;
-      background-color: $background-color-light;
+      background-color: lighten($color: black, $amount: 95%);
       box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
       border-radius: 2.5rem;
       margin-bottom: 3.5rem;
       @include flex_row;
       align-items: baseline;
-
+      cursor: pointer;
       p {
         color: $color-icons;
         padding-left: 1.5em;
@@ -108,7 +109,7 @@ header {
         padding-left: 2em;
       }
       &:hover {
-        background-color: $color-primary-light;
+        @include lighten($color-primary);
         p {
           color: $color-primary;
         }
@@ -127,7 +128,7 @@ h2 {
   padding-right: 2rem;
   padding-bottom: 5rem;
   width: 100%;
-  background-color: $background-color-light;
+  background-color: lighten($color: black, $amount: 95%);
   @include flex_column;
   align-items: center;
   .sans_titre {
@@ -182,11 +183,15 @@ h2 {
       font-size: 2.1rem;
       margin-bottom: 0;
     }
-    .figcaption_lieu {
+    p {
+      margin-top: 0.5rem;
+    }
+    div {
+      font-weight: 100;
       font-size: 2rem;
       margin: 0.5rem 0 2rem 0;
     }
-    p {
+    .heart_icon {
       font-size: 3rem;
       margin-right: 3rem;
       margin-top: 3rem;
@@ -203,7 +208,7 @@ h2 {
 
 footer {
   color: white;
-  background-color: $background-color-dark;
+  background-color: lighten($color: black, $amount: 20%);
   @include flex_column;
   img {
     width: 11rem;
@@ -232,6 +237,43 @@ li {
     margin-right: 2rem;
   }
 }
+
+// PAGE 1
+
+// .main_pages_page1 {
+//   background-image: url("toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+//   height: 30rem;
+//   width: 100%;
+// }
+.menu {
+  @include flex_column;
+  background-color: lighten($color: black, $amount: 95%);
+}
+
+.titre_pages {
+  @include flex_row;
+  justify-content: space-between;
+  // border-top-left-radius: 20px;
+  // border-top-right-radius: 20px;
+  margin-left: 2rem;
+  h3 {
+    font-size: 3rem;
+  }
+}
+.pages_entrees,
+.pages_plats,
+.pages_desserts {
+  margin: 0 2rem;
+  p {
+    text-transform: uppercase;
+  }
+}
+// .pages_entrees p {
+// }
+
+// article {
+//   @extend figcaption;
+// }
 .btn_action_commander {
   @extend.btn_action_explorer;
 }

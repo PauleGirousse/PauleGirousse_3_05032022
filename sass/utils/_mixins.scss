@@ -14,3 +14,6 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+@mixin lighten($color) {
+  background-color: lighten($color, $amount: 30%);
+}
