@@ -55,7 +55,7 @@ header {
 .btn_action_explorer {
   height: 6rem;
   width: 26rem;
-  background: linear-gradient(to left top, $color-primary, $color-secondary);
+  background: linear-gradient(to top, $color-primary, $color-secondary);
   font-size: 1.8rem;
   color: white;
   border-radius: 5rem;
@@ -134,6 +134,12 @@ h2 {
   .sans_titre {
     width: 100%;
     @include flex_column;
+    align-items: center;
+    @media screen and (min-width: 880px) {
+      @include flex_row;
+      justify-content: space-between;
+      column-gap: 2rem;
+    }
   }
 }
 
@@ -142,7 +148,12 @@ h2 {
   border-bottom-right-radius: 2rem;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
+  width: 48%;
+  min-width: 40.8rem;
+  max-width: 58rem;
+  flex-grow: 1;
   figure {
+    width: 100%;
     margin: 0;
     position: relative;
     img {
@@ -153,15 +164,18 @@ h2 {
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;
     }
+    .img_page2 {
+      object-position: 50% 62%;
+    }
     &::after {
       content: "Nouveau";
-      height: 3rem;
-      width: 8rem;
+      height: 3.3rem;
+      width: 9.5rem;
+      font-size: 1.7rem;
       font-weight: bold;
-      font-family: $font-family-base;
       color: darken($color-tertiary, 45);
       background-color: darken($color-tertiary, 10);
-      padding-top: 0.8rem;
+      padding-top: 0.7rem;
       text-align: center;
       display: inline-block;
       position: absolute;
@@ -178,12 +192,16 @@ h2 {
     .details_figcaption {
       @include flex_column;
       padding-left: 2rem;
+      margin-top: 0;
     }
     h3 {
       font-size: 2.1rem;
       margin-bottom: 0;
     }
-    p {
+    .page3 h3::first-letter {
+      text-transform: uppercase;
+    }
+    span {
       margin-top: 0.5rem;
     }
     div {
@@ -205,7 +223,9 @@ h2 {
     }
   }
 }
-
+.page2_img {
+  object-position: 50% 50%;
+}
 footer {
   color: white;
   background-color: lighten($color: black, $amount: 20%);

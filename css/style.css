@@ -72,7 +72,7 @@ header p {
 .btn_action_explorer, .btn_action_commander {
   height: 6rem;
   width: 26rem;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
+  background: linear-gradient(to top, #9356dc, #ff79da);
   font-size: 1.8rem;
   color: white;
   border-radius: 5rem;
@@ -158,6 +158,16 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 880px) {
+  .restaurants .sans_titre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 2rem;
+  }
 }
 
 .pages {
@@ -165,8 +175,13 @@ h2 {
   border-bottom-right-radius: 2rem;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
+  width: 48%;
+  min-width: 40.8rem;
+  max-width: 58rem;
+  flex-grow: 1;
 }
 .pages figure {
+  width: 100%;
   margin: 0;
   position: relative;
 }
@@ -178,15 +193,18 @@ h2 {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
+.pages figure .img_page2 {
+  object-position: 50% 62%;
+}
 .pages figure::after {
   content: "Nouveau";
-  height: 3rem;
-  width: 8rem;
+  height: 3.3rem;
+  width: 9.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  font-family: "Roboto", sans-serif;
   color: #217460;
   background-color: #71d7be;
-  padding-top: 0.8rem;
+  padding-top: 0.7rem;
   text-align: center;
   display: inline-block;
   position: absolute;
@@ -206,12 +224,16 @@ h2 {
   display: flex;
   flex-direction: column;
   padding-left: 2rem;
+  margin-top: 0;
 }
 .pages figcaption h3 {
   font-size: 2.1rem;
   margin-bottom: 0;
 }
-.pages figcaption p {
+.pages figcaption .page3 h3::first-letter {
+  text-transform: uppercase;
+}
+.pages figcaption span {
   margin-top: 0.5rem;
 }
 .pages figcaption div {
@@ -226,6 +248,10 @@ h2 {
 }
 .pages figcaption .heart_icon:hover {
   background: linear-gradient(to bottom, #9356dc, #ff79da);
+}
+
+.page2_img {
+  object-position: 50% 50%;
 }
 
 footer {
