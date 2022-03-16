@@ -75,6 +75,11 @@ header {
     list-style: none;
     counter-reset: li;
     padding-left: 0.5rem;
+    @media screen and (min-width: 1000px) {
+      @include flex_row;
+      column-gap: 4rem;
+      justify-content: center;
+    }
     li::before {
       content: counter(li);
       height: 3rem;
@@ -117,6 +122,7 @@ header {
     }
   }
 }
+
 h2 {
   font-size: 2.8rem;
   align-self: flex-start;

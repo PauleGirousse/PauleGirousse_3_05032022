@@ -95,6 +95,15 @@ header p {
   counter-reset: li;
   padding-left: 0.5rem;
 }
+@media screen and (min-width: 1000px) {
+  .fonctionnement ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    justify-content: center;
+  }
+}
 .fonctionnement ol li::before {
   content: counter(li);
   height: 3rem;
