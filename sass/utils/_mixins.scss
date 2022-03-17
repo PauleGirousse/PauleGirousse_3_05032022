@@ -17,3 +17,12 @@
 @mixin lighten($color) {
   background-color: lighten($color, $amount: 30%);
 }
+// @mixin overflow {
+//   .nom span {
+//     @if (width > 310px) {
+//       text-overflow: ellipsis;
+//     } @else {
+//       overflow: visible;
+//     }
+//   }
+// }

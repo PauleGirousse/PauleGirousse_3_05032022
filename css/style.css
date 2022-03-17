@@ -298,14 +298,29 @@ li i {
   margin-right: 2rem;
 }
 
+.nav_pages {
+  background-color: white;
+}
+.nav_pages i {
+  font-size: 2rem;
+  width: 2rem;
+  float: left;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
 .image {
-  height: 30rem;
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
   width: 100%;
+  padding-top: 300px;
 }
 
 .menu {
-  border-top-left-radius: 5rem;
-  border-top-right-radius: 5rem;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
@@ -316,10 +331,12 @@ li i {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 3rem;
+  align-items: baseline;
+  padding-left: 3rem;
 }
 .titre_pages h3 {
   font-size: 3rem;
+  margin-top: 40px;
 }
 .titre_pages .heart_icon {
   font-size: 3rem;
@@ -333,22 +350,24 @@ li i {
 .entrees,
 .plats,
 .desserts {
-  margin: 0 2rem;
+  margin: 0 15px;
 }
 .entrees > p,
 .plats > p,
 .desserts > p {
+  font-size: 2rem;
   padding-left: 1rem;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-top: 15px;
+  margin-bottom: 25px;
   position: relative;
 }
 .entrees > p:after,
 .plats > p:after,
 .desserts > p:after {
   content: "";
-  width: 4rem;
-  border-bottom: 3px solid #99e2d0;
+  width: 5rem;
+  border-bottom: 4px solid #99e2d0;
   position: absolute;
   bottom: -1rem;
   left: 1rem;
@@ -356,8 +375,9 @@ li i {
 
 article {
   background-color: white;
-  margin-bottom: 2rem;
-  border-radius: 25px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -366,9 +386,27 @@ article {
 }
 article .nom {
   padding-left: 1rem;
+  margin-bottom: 15px;
+}
+article .nom h4 {
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 2.1rem;
+}
+article .nom span {
+  font-weight: 100;
+  font-size: 1.8rem;
 }
 article .prix {
+  font-weight: 500;
+  font-size: 2rem;
   margin-right: 3rem;
+}
+
+.btn_action_commander {
+  margin-top: 50px;
+  width: 225px;
 }
 
 /*# sourceMappingURL=style.css.map */
