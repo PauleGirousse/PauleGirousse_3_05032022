@@ -266,12 +266,14 @@ li {
 
 // PAGE 1
 
-// .main_pages_page1 {
-//   background-image: url("toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-//   height: 30rem;
-//   width: 100%;
-// }
+.image {
+  // background-image:url("")
+  height: 30rem;
+  width: 100%;
+}
 .menu {
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
   @include flex_column;
   background-color: lighten($color: black, $amount: 95%);
 }
@@ -279,27 +281,53 @@ li {
 .titre_pages {
   @include flex_row;
   justify-content: space-between;
-  // border-top-left-radius: 20px;
-  // border-top-right-radius: 20px;
-  margin-left: 2rem;
+  margin-left: 3rem;
   h3 {
     font-size: 3rem;
   }
-}
-.pages_entrees,
-.pages_plats,
-.pages_desserts {
-  margin: 0 2rem;
-  p {
-    text-transform: uppercase;
+  .heart_icon {
+    font-size: 3rem;
+    margin-right: 4rem;
+    margin-top: 3rem;
+    &:hover {
+      background: linear-gradient(to bottom, $color-primary, $color-secondary);
+    }
   }
 }
-// .pages_entrees p {
-// }
+.entrees,
+.plats,
+.desserts {
+  margin: 0 2rem;
+  > p {
+    padding-left: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+    &:after {
+      content: "";
+      width: 4rem;
+      border-bottom: 3px solid $color-tertiary;
+      position: absolute;
+      bottom: -1rem;
+      left: 1rem;
+    }
+  }
+}
+article {
+  background-color: white;
+  margin-bottom: 2rem;
+  border-radius: 25px;
+  @include flex_row;
+  justify-content: space-between;
+  align-items: flex-end;
+  .nom {
+    padding-left: 1rem;
+  }
+  .prix {
+    margin-right: 3rem;
+  }
+}
 
-// article {
-//   @extend figcaption;
-// }
 .btn_action_commander {
   @extend.btn_action_explorer;
 }
