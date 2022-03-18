@@ -27,7 +27,6 @@ body {
   font-size: 1.4em;
   min-width: 45rem;
   max-width: 120rem;
-  border: 0.1rem solid red;
 }
 
 .loading_spinner {
@@ -188,11 +187,11 @@ h2 {
   min-width: 40.8rem;
   max-width: 58rem;
   flex-grow: 1;
+  position: relative;
 }
 .pages figure {
   width: 100%;
   margin: 0;
-  position: relative;
 }
 .pages figure img {
   height: 20rem;
@@ -205,8 +204,7 @@ h2 {
 .pages figure .img_page2 {
   object-position: 50% 62%;
 }
-.pages figure::after {
-  content: "Nouveau";
+.pages .encadre {
   height: 3.3rem;
   width: 9.5rem;
   font-size: 1.7rem;
@@ -215,12 +213,12 @@ h2 {
   background-color: #71d7be;
   padding-top: 0.7rem;
   text-align: center;
-  display: inline-block;
   position: absolute;
   right: 2rem;
   top: 2rem;
 }
-.pages figcaption {
+
+figcaption {
   background-color: white;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -229,33 +227,33 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.pages figcaption .details_figcaption {
+figcaption .details_figcaption {
   display: flex;
   flex-direction: column;
   padding-left: 2rem;
   margin-top: 0;
 }
-.pages figcaption h3 {
+figcaption h3 {
   font-size: 2.1rem;
   margin-bottom: 0;
 }
-.pages figcaption .page3 h3::first-letter {
+figcaption .page3 h3::first-letter {
   text-transform: uppercase;
 }
-.pages figcaption span {
+figcaption span {
   margin-top: 0.5rem;
 }
-.pages figcaption div {
+figcaption div {
   font-weight: 100;
   font-size: 2rem;
   margin: 0.5rem 0 2rem 0;
 }
-.pages figcaption .heart_icon {
+figcaption .heart_icon {
   font-size: 3rem;
   margin-right: 3rem;
   margin-top: 3rem;
 }
-.pages figcaption .heart_icon:hover {
+figcaption .heart_icon:hover {
   background: linear-gradient(to bottom, #9356dc, #ff79da);
 }
 
