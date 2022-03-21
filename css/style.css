@@ -24,6 +24,7 @@ html {
 }
 
 body {
+  margin: 0 auto;
   font-size: 1.4em;
   min-width: 45rem;
   max-width: 120rem;
@@ -71,16 +72,35 @@ header p {
 .btn_action_explorer, .btn_action_commander {
   height: 6rem;
   width: 26rem;
-  background: linear-gradient(to top, #9356dc, #ff79da);
+  background: linear-gradient(170deg, #ff79da 20%, #9356dc);
   font-size: 1.8rem;
   color: white;
   border-radius: 5rem;
   border: 0.1rem;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.55);
   margin: 1rem auto 7rem auto;
+  position: relative;
+  z-index: 1;
 }
 .btn_action_explorer:hover, .btn_action_commander:hover {
   cursor: pointer;
+  box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.75);
+}
+.btn_action_explorer:hover::after, .btn_action_commander:hover::after {
+  opacity: 1;
+}
+.btn_action_explorer::after, .btn_action_commander::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px;
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .fonctionnement {
@@ -237,7 +257,7 @@ figcaption h3 {
   font-size: 2.1rem;
   margin-bottom: 0;
 }
-figcaption .page3 h3::first-letter {
+figcaption h3::first-letter {
   text-transform: uppercase;
 }
 figcaption span {
@@ -253,8 +273,10 @@ figcaption .heart_icon {
   margin-right: 3rem;
   margin-top: 3rem;
 }
-figcaption .heart_icon:hover {
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
+figcaption .fa-heart:hover {
+  color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
 }
 
 .page2_img {
@@ -308,15 +330,21 @@ li i {
   left: 30px;
 }
 
-.image {
-  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 35%;
+figure {
+  margin: 0;
+}
+
+.img_pages {
   width: 100%;
-  padding-top: 300px;
+  object-fit: cover;
+  height: 300px;
+}
+.img_pages.img_page2 {
+  object-position: 50% 46%;
 }
 
 .menu {
+  transform: translateY(-3%);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   display: flex;
@@ -336,6 +364,9 @@ li i {
   font-size: 3rem;
   margin-top: 40px;
 }
+.titre_pages h3::first-letter {
+  text-transform: uppercase;
+}
 .titre_pages .heart_icon {
   font-size: 3rem;
   margin-right: 4rem;
@@ -349,6 +380,7 @@ li i {
 .plats,
 .desserts {
   margin: 0 15px;
+  margin-bottom: 40px;
 }
 .entrees > p,
 .plats > p,
@@ -403,7 +435,7 @@ article .prix {
 }
 
 .btn_action_commander {
-  margin-top: 50px;
+  margin-top: 10px;
   width: 225px;
 }
 

@@ -1,6 +1,10 @@
 $color-primary: #9356dc;
+$color-primary-clear: lighten(#9356dc, 5%);
 $color-secondary: #ff79da;
+$color-secondary-clear: lighten(#ff79da, 5%);
+
 $color-tertiary: #99e2d0;
+$color-gradient: linear-gradient(170deg, #ff79da 25%, #9356dc);
 
 $background-color-medium: rgba(0, 0, 0, 0.1);
 
