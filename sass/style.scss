@@ -15,24 +15,31 @@ body {
 }
 
 .loading_spinner {
-  height: 6rem;
-  width: 6rem;
+  height: 100px;
+  width: 100px;
   background-color: $color-primary;
+  border-radius: 50%;
+  position: relative;
   @include flex_row;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 50px auto;
   animation: spin 3s linear infinite;
   i {
-    font-size: 3rem;
+    font-size: 50px;
     color: $color-tertiary;
     display: block;
   }
-  //   .rond {
-  //     border-top: 0.5rem solid $color-secondary;
-  //     border-radius: 50%;
-  //   }
-  // }
+}
+.cercle {
+  width: 120px;
+  height: 120px;
+  border: 10px solid $color-secondary;
+  position: absolute;
+  top: 40px;
+  left: 658px;
+  animation: spin 3s linear infinite;
+  animation-direction: reverse;
 }
 @keyframes spin {
   from {

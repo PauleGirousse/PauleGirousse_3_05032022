@@ -31,21 +31,34 @@ body {
 }
 
 .loading_spinner {
-  height: 6rem;
-  width: 6rem;
+  height: 100px;
+  width: 100px;
   background-color: #9356dc;
+  border-radius: 50%;
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 50px auto;
   animation: spin 3s linear infinite;
 }
 .loading_spinner i {
-  font-size: 3rem;
+  font-size: 50px;
   color: #99e2d0;
   display: block;
+}
+
+.cercle {
+  width: 120px;
+  height: 120px;
+  border: 10px solid #ff79da;
+  position: absolute;
+  top: 40px;
+  left: 658px;
+  animation: spin 3s linear infinite;
+  animation-direction: reverse;
 }
 
 @keyframes spin {
