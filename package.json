@@ -11,5 +11,8 @@
     "url": "https://github.com/PauleGirousse_3_05032022"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.4"
+  }
 }

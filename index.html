@@ -22,7 +22,10 @@
 
   <body>
     <!-- LOADING SPINNER -->
-    <div class="loading_spinner"></div>
+    <div class="loading_spinner">
+      <i class="fas fa-utensils"></i>
+      <div class="rond"></div>
+    </div>
 
     <!-- BARRE DE NAVIGATION -->
     <nav>
@@ -73,25 +76,34 @@
       <section class="restaurants">
         <h2>Restaurants</h2>
         <div class="sans_titre">
-          <a class="pages page1" href="page1.html">
-            <figure>
-              <img
-                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt="table de restaurant"
-              />
-            </figure>
-            <div class="encadre">Nouveau</div>
-            <figcaption>
-              <div class="details_figcaption">
-                <h3>la palette du goût</h3>
-                <span class="figcaption_lieu">Ménilmontant</span>
-              </div>
-              <div class="heart_icon">
+          <div class="pages">
+            <a class="page1" href="page1.html">
+              <figure>
+                <img
+                  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="table de restaurant"
+                />
+              </figure>
+
+              <div class="encadre">Nouveau</div>
+
+              <figcaption>
+                <div class="details_figcaption">
+                  <h3>la palette du goût</h3>
+                  <span class="figcaption_lieu">Ménilmontant</span>
+                </div>
+              </figcaption>
+            </a>
+
+            <div class="animation_coeur">
+              <div class="icone_vide">
                 <i class="far fa-heart"></i>
+              </div>
+              <div class="icone_plein">
                 <i class="fas fa-heart"></i>
               </div>
-            </figcaption>
-          </a>
+            </div>
+          </div>
 
           <a class="pages page2" href="page2.html">
             <figure>
