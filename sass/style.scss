@@ -10,21 +10,26 @@ html {
 body {
   margin: 0 auto;
   font-size: 1.4em;
-  min-width: 45rem;
-  max-width: 120rem;
+  min-width: 450px;
+  max-width: 1200px;
 }
+// body > :not(.container) {
+//   opacity: 0.2;
+// }
 
 .loading_spinner {
   height: 100px;
   width: 100px;
   background-color: $color-primary;
   border-radius: 50%;
-  position: relative;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  position: fixed;
+  z-index: 1;
   @include flex_row;
   justify-content: center;
   align-items: center;
-  margin: 50px auto;
-  animation: spin 3s linear infinite;
+  animation: rotation 3s linear infinite;
   i {
     font-size: 50px;
     color: $color-tertiary;
@@ -34,14 +39,19 @@ body {
 .cercle {
   width: 120px;
   height: 120px;
-  border: 10px solid $color-secondary;
-  position: absolute;
-  top: 40px;
-  left: 658px;
-  animation: spin 3s linear infinite;
+  border-top: 10px solid $color-secondary;
+  border-right: 10px solid $color-tertiary;
+  border-bottom: 10px solid $color-secondary;
+  border-left: 10px solid $color-tertiary;
+  border-radius: 50%;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  position: fixed;
+  z-index: 1;
+  animation: rotation 3s linear infinite;
   animation-direction: reverse;
 }
-@keyframes spin {
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
@@ -49,12 +59,13 @@ body {
     transform: rotate(360deg);
   }
 }
+// BARRE DE NAVIGATION
 .nav_logo {
-  width: 20rem;
-  margin: 2rem auto;
+  width: 200px;
+  margin: 20px auto;
   display: block;
 }
-
+// HEADER
 header {
   width: 100%;
   background-color: lighten($color: black, $amount: 95%);
@@ -66,19 +77,19 @@ header {
     font-family: "Roboto", sans-serif;
     padding-top: 20px;
     -webkit-box-shadow: inset 0px 15px 18px -8px rgba(0, 0, 0, 0.33);
-    box-shadow: inset 0px 15px 18px -8px rgba(0, 0, 0, 0.33);
-    height: 6rem;
+    box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.33);
+    height: 60px;
     background-color: $background-color-medium;
     text-align: center;
-    i {
+    .icone_lieu {
       font-size: 2rem;
       padding-right: 10px;
     }
   }
   h1 {
     text-align: center;
-    padding: 0 7rem;
-    margin-top: 5rem;
+    padding: 0 70px;
+    margin-top: 50px;
     margin-bottom: 0;
   }
   p {
@@ -86,20 +97,20 @@ header {
     font-size: 2.1rem;
     color: grey;
     text-align: center;
-    padding: 0 4rem;
+    padding: 0 40px;
   }
 }
 
 .btn_action_explorer {
-  height: 6rem;
-  width: 26rem;
+  height: 60px;
+  width: 260px;
   background: linear-gradient(170deg, #ff79da 20%, #9356dc);
   font-size: 1.8rem;
   color: white;
-  border-radius: 5rem;
-  border: 0.1rem;
+  border-radius: 50px;
+  border: 1px;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.55);
-  margin: 1rem auto 7rem auto;
+  margin: 10px auto 7rem auto;
   position: relative;
   z-index: 1;
   &:hover {
@@ -127,24 +138,24 @@ header {
     transition: opacity 250ms;
   }
 }
-
+// FONCTIONNEMENT
 .fonctionnement {
-  padding: 3rem 2rem 5rem 2rem;
+  padding: 30px 20px 50px 20px;
   @include flex_column;
   align-items: center;
   ol {
     list-style: none;
     counter-reset: li;
-    padding-left: 0.5rem;
+    padding-left: 5px;
     @media screen and (min-width: 1000px) {
       @include flex_row;
-      column-gap: 4rem;
+      column-gap: 40px;
       justify-content: center;
     }
     li::before {
       content: counter(li);
-      height: 3rem;
-      width: 3rem;
+      height: 30px;
+      width: 30px;
       color: white;
       background-color: $color-primary;
       border-radius: 50%;
@@ -156,12 +167,12 @@ header {
     }
     li {
       counter-increment: li;
-      height: 8rem;
-      min-width: 38rem;
+      height: 80px;
+      min-width: 380px;
       background-color: lighten($color: black, $amount: 95%);
       box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
-      border-radius: 2.5rem;
-      margin-bottom: 3.5rem;
+      border-radius: 25px;
+      margin-bottom: 35px;
       @include flex_row;
       align-items: baseline;
       cursor: pointer;
@@ -185,15 +196,15 @@ header {
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 28px;
   align-self: flex-start;
 }
-
+// RESTAURANTS
 .restaurants {
-  padding-top: 5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 5rem;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
   width: 100%;
   background-color: lighten($color: black, $amount: 95%);
   @include flex_column;
@@ -205,62 +216,62 @@ h2 {
     @media screen and (min-width: 880px) {
       @include flex_row;
       justify-content: space-between;
-      column-gap: 2rem;
+      column-gap: 20px;
     }
   }
 }
 
 .pages {
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   width: 48%;
-  min-width: 40.8rem;
-  max-width: 58rem;
+  min-width: 408px;
+  max-width: 580px;
   flex-grow: 1;
   position: relative;
   figure {
     width: 100%;
     margin: 0;
     img {
-      height: 20rem;
+      height: 200px;
       width: 100%;
       object-fit: cover;
       object-position: 50% 98%;
-      border-top-left-radius: 2rem;
-      border-top-right-radius: 2rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
     .img_page2 {
       object-position: 50% 62%;
     }
   }
   .encadre {
-    height: 3.3rem;
-    width: 9.5rem;
+    height: 33px;
+    width: 95px;
     font-size: 1.7rem;
     font-weight: bold;
     color: darken($color-tertiary, 45);
     background-color: darken($color-tertiary, 10);
-    padding-top: 0.7rem;
+    padding-top: 7px;
     text-align: center;
     position: absolute;
-    right: 2rem;
-    top: 2rem;
+    right: 20px;
+    top: 20px;
   }
 }
-.pages {
+.animation_coeur {
   position: relative;
 }
 figcaption {
   background-color: white;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   @include flex_row;
   justify-content: space-between;
   .details_figcaption {
     @include flex_column;
-    padding-left: 2rem;
+    padding-left: 20px;
     margin-top: 0;
   }
   h3 {
@@ -271,12 +282,12 @@ figcaption {
     }
   }
   span {
-    margin-top: 0.5rem;
+    margin-top: 5px;
   }
   div {
     font-weight: 100;
     font-size: 2rem;
-    margin: 0.5rem 0 2rem 0;
+    margin: 5px 0 20px 0;
   }
 }
 
@@ -287,9 +298,12 @@ figcaption {
   right: 30px;
   z-index: 1;
   cursor: pointer;
-  &:hover {
-    opacity: 0;
-  }
+  // &:hover {
+  //   opacity: 0;
+  // }
+}
+.animation_coeur:hover .icone_vide {
+  opacity: 0;
 }
 .icone_plein {
   font-size: 3rem;
@@ -304,21 +318,25 @@ figcaption {
   opacity: 0;
   transition: opacity ease 0.5s;
 }
-.icone_vide:hover + .icone_plein {
+.animation_coeur:hover .icone_plein {
   opacity: 1;
 }
+// .icone_vide:hover + .icone_plein {
+//   opacity: 1;
+// }
 
 .page2_img {
   object-position: 50% 50%;
 }
+// FOOTER
 footer {
   color: white;
   background-color: lighten($color: black, $amount: 20%);
   @include flex_column;
   img {
-    width: 11rem;
-    margin-top: 3rem;
-    margin-left: 4rem;
+    width: 110px;
+    margin-top: 30px;
+    margin-left: 40px;
     filter: invert(100%);
   }
   a {
@@ -336,20 +354,21 @@ ul {
 li {
   color: black;
   i {
-    width: 1rem;
+    width: 10px;
     font-size: 1.4rem;
     color: white;
-    margin-right: 2rem;
+    margin-right: 20px;
   }
 }
 
 // PAGES
 
-.nav_pages {
+.header_pages {
   background-color: white;
-  i {
+  position: relative;
+  .icone_fleche {
     font-size: 2rem;
-    width: 2rem;
+    width: 20px;
     float: left;
     position: absolute;
     top: 30px;
@@ -381,6 +400,7 @@ figure {
   //   width: 100%;
   //   // height: 300px;
   //   padding-top: 300px;
+  // background-position: center;
   // }
 }
 .menu {
@@ -395,7 +415,7 @@ figure {
   @include flex_row;
   justify-content: space-between;
   align-items: baseline;
-  padding-left: 3rem;
+  padding-left: 30px;
   h3 {
     font-size: 3rem;
     margin-top: 40px;
@@ -403,16 +423,19 @@ figure {
       text-transform: uppercase;
     }
   }
+  .animation_coeur {
+    position: relative;
+    cursor: pointer;
+  }
   .pages_icone_vide {
     font-size: 3rem;
     position: absolute;
-    top: 40px;
+    top: -30px;
     right: 30px;
     z-index: 1;
-    cursor: pointer;
-    &:hover {
-      opacity: 0;
-    }
+  }
+  .animation_coeur:hover .pages_icone_vide {
+    opacity: 0;
   }
   .pages_icone_plein {
     font-size: 3rem;
@@ -420,30 +443,76 @@ figure {
     background: linear-gradient(#9356dc, #ff79da);
     -webkit-background-clip: text;
     background-clip: text;
-    cursor: pointer;
+    // cursor: pointer;
     position: absolute;
-    top: 40px;
+    top: -30px;
     right: 30px;
     opacity: 0;
     transition: opacity ease 0.5s;
   }
+  .animation_coeur:hover .pages_icone_plein {
+    opacity: 1;
+  }
 }
-.pages_icone_vide:hover + .pages_icone_plein {
-  opacity: 1;
-}
+// .pages_icone_vide:hover + .pages_icone_plein {
+//   opacity: 1;
+// }
 // font-size: 3rem;
 // margin-right: 4rem;
 // margin-top: 3rem;
 // &:hover {
 //   background: linear-gradient(to bottom, $color-primary, $color-secondary);
 
-.article {
-  .nom,
-  .prix {
-    animation: apparition_article ease 3000ms;
+// .article {
+//   .nom,
+//   .prix {
+//     animation: apparition_article ease 3000ms;
+//   }
+// }
+// @keyframes apparition_article {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+.entrees,
+.plats,
+.desserts {
+  margin: 0 15px;
+  margin-bottom: 40px;
+  opacity: 0;
+
+  > p {
+    font-size: 2rem;
+    padding-left: 10px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    &:after {
+      content: "";
+      width: 50px;
+      border-bottom: 4px solid $color-tertiary;
+      position: absolute;
+      bottom: -10px;
+      left: 10px;
+    }
   }
 }
-@keyframes apparition_article {
+
+.entrees {
+  animation: animation_menu 2s linear forwards;
+}
+.plats {
+  animation: animation_menu 2s linear forwards 1s;
+}
+.desserts {
+  animation: animation_menu 2s linear forwards 2s;
+}
+@keyframes animation_menu {
   from {
     opacity: 0;
   }
@@ -451,30 +520,6 @@ figure {
     opacity: 1;
   }
 }
-
-.entrees,
-.plats,
-.desserts {
-  margin: 0 15px;
-  margin-bottom: 40px;
-  > p {
-    font-size: 2rem;
-    padding-left: 1rem;
-    text-transform: uppercase;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    position: relative;
-    &:after {
-      content: "";
-      width: 5rem;
-      border-bottom: 4px solid $color-tertiary;
-      position: absolute;
-      bottom: -1rem;
-      left: 1rem;
-    }
-  }
-}
-
 article {
   background-color: white;
   margin-top: 20px;
@@ -485,7 +530,7 @@ article {
   justify-content: space-between;
   align-items: flex-end;
   .nom {
-    padding-left: 1rem;
+    padding-left: 10px;
     margin-bottom: 15px;
     h4 {
       font-weight: 500;
@@ -501,7 +546,7 @@ article {
   .prix {
     font-weight: 500;
     font-size: 2rem;
-    margin-right: 3rem;
+    margin-right: 30px;
   }
   .validation_du_plat {
     height: 80px;
@@ -544,4 +589,7 @@ article {
     -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
   }
+}
+.footer_pages {
+  transform: translateY(-42px);
 }

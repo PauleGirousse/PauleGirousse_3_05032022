@@ -19,14 +19,17 @@
     <title>ohmyfood_page2</title>
   </head>
   <body>
-    <header>
-      <nav class="nav_pages">
-        <a href="/index.html"><i class="fas fa-arrow-left"></i></a>
+    <header class="header_pages">
+      <nav>
+        <a href="/index.html"><i class="fas fa-arrow-left icone_fleche"></i></a>
 
         <div>
           <img class="nav_logo" src="images/logo/ohmyfood.png" alt="#" />
         </div>
       </nav>
+    </header>
+
+    <main class="main_pages">
       <figure>
         <img
           class="img_pages img_page2"
@@ -34,20 +37,19 @@
           alt="entrée et plat"
         />
       </figure>
-    </header>
-
-    <main class="main_pages">
       <div class="menu">
         <div class="titre_pages">
           <h3>la note enchantée</h3>
-                 
-          <div class="pages_icone_vide">
-            <i class="far fa-heart"></i>
+
+          <div class="animation_coeur">
+            <div class="pages_icone_vide">
+              <i class="far fa-heart"></i>
+            </div>
+            <div class="pages_icone_plein">
+              <i class="fas fa-heart"></i>
+            </div>
           </div>
-          <div class="pages_icone_plein">
-            <i class="fas fa-heart"></i>
-          </div>
-          
+        </div>
 
         <section class="entrees">
           <p>entrées</p>
@@ -146,7 +148,7 @@
     </main>
     <!-- FOOTER -->
 
-    <footer>
+    <footer class="footer_pages">
       <div>
         <img class="footer_logo" src="images/logo/ohmyfood.png" alt="#" />
       </div>
