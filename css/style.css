@@ -30,6 +30,15 @@ body {
   max-width: 1200px;
 }
 
+body > :not(.container) {
+  opacity: 0;
+  animation: opacite 3s linear forwards;
+}
+
+.container {
+  animation: opacite 1s ease-out forwards reverse 2s;
+}
+
 .loading_spinner {
   height: 100px;
   width: 100px;
@@ -501,20 +510,20 @@ figure {
 }
 
 .entrees {
-  animation: animation_menu 2s linear forwards;
+  animation: opacite 2s linear forwards;
 }
 
 .plats {
-  animation: animation_menu 2s linear forwards 1s;
+  animation: opacite 2s linear forwards 1s;
 }
 
 .desserts {
-  animation: animation_menu 2s linear forwards 2s;
+  animation: opacite 2s linear forwards 2s;
 }
 
-@keyframes animation_menu {
+@keyframes opacite {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
     opacity: 1;
@@ -531,6 +540,8 @@ article {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 article .nom {
   padding-left: 10px;
@@ -550,31 +561,49 @@ article .prix {
   font-weight: 500;
   font-size: 2rem;
   margin-right: 30px;
+  margin-bottom: 15px;
+  position: absolute;
+  right: 0;
 }
 article .validation_du_plat {
-  height: 80px;
-  width: 70px;
+  height: 100%;
+  width: 17%;
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  z-index: -1;
+  display: none;
   position: absolute;
-  right: 12px;
-  transform: translateX(70px);
+  right: 0;
 }
 article .validation_du_plat .icone_validation {
   width: 25px;
   height: 25px;
   fill: white;
+  position: relative;
+  top: calc(50% - 1em);
+  left: calc(50% - 1em);
+  animation: rotation 800ms linear;
 }
-article .validation_du_plat:hover + .validation_du_plat {
-  opacity: 1;
-  -webkit-animation: boite_verte 0.5s linear both;
-  animation: boite_verte 0.5s linear both;
+
+article:hover span {
+  display: inline-block;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+article:hover .validation_du_plat {
+  display: block;
+  z-index: -1;
+  -webkit-animation: decalage_gauche 1s linear both;
+  animation: decalage_gauche 1s linear both;
+}
+
+article:hover .prix {
+  -webkit-animation: decalage_gauche_prix 0.5s linear both;
+  animation: decalage_gauche_prix 0.5s linear both;
 }
 
 .btn_action_commander {
@@ -582,14 +611,23 @@ article .validation_du_plat:hover + .validation_du_plat {
   width: 225px;
 }
 
-@keyframes boite_verte {
+@keyframes decalage_gauche {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    z-index: -1;
+    right: -17%;
+    overflow: hidden;
   }
   100% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+    right: -1;
+    z-index: 1;
+  }
+}
+@keyframes decalage_gauche_prix {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 15%;
   }
 }
 .footer_pages {
