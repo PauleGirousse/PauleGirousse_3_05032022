@@ -3,6 +3,7 @@
 @import "./utils/variables";
 @import "./components/buttons";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 html {
   font-size: 62.5%;
 }
@@ -18,17 +19,17 @@ body > :not(.container) {
   animation: opacite 3s linear forwards;
 }
 .container {
-  animation: opacite 1s ease-out forwards reverse 2s;
+  animation: opacite 1s ease-in forwards reverse 2s;
+  // animation: opacite 3s ease-out forwards reverse 1s;
+
   // animation: fondu 2s linear forwards 3s;
 }
 // @keyframes fondu {
 //   from {
 //     opacity: 1;
-//     // background-color: rgba(0, 0, 0, 0);
 //   }
 //   to {
 //     opacity: 0;
-//     // background-color: rgba(0, 0, 0, 1);
 //   }
 // }
 .loading_spinner {
@@ -36,10 +37,10 @@ body > :not(.container) {
   width: 100px;
   background-color: $color-primary;
   border-radius: 50%;
-  top: calc(50% - 50px);
+  top: calc(45% - 50px);
   left: calc(50% - 50px);
   position: fixed;
-  z-index: 1;
+  // z-index: 10;
   @include flex_row;
   justify-content: center;
   align-items: center;
@@ -58,21 +59,14 @@ body > :not(.container) {
   border-bottom: 10px solid $color-secondary;
   border-left: 10px solid $color-tertiary;
   border-radius: 50%;
-  top: calc(50% - 60px);
+  top: calc(45% - 60px);
   left: calc(50% - 60px);
   position: fixed;
-  z-index: 1;
+  // z-index: 10;
   animation: rotation 3s linear infinite;
   animation-direction: reverse;
 }
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 // BARRE DE NAVIGATION
 .nav_logo {
   width: 200px;
@@ -477,12 +471,13 @@ figure {
 // &:hover {
 //   background: linear-gradient(to bottom, $color-primary, $color-secondary);
 
-// .article {
-//   .nom,
-//   .prix {
-//     animation: apparition_article ease 3000ms;
-//   }
-// }
+.article {
+  .nom,
+  .prix {
+    // animation: apparition_article ease 3000ms;
+    animation: opacite linear 2s;
+  }
+}
 // @keyframes apparition_article {
 //   from {
 //     opacity: 0;
@@ -526,14 +521,7 @@ figure {
 .desserts {
   animation: opacite 2s linear forwards 2s;
 }
-@keyframes opacite {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 article {
   background-color: white;
   margin-top: 20px;
@@ -555,8 +543,10 @@ article {
       font-size: 2.1rem;
     }
     span {
+      min-width: 260px;
       font-weight: 100;
       font-size: 1.8rem;
+      display: block;
     }
   }
   .prix {
@@ -584,13 +574,13 @@ article {
       position: relative;
       top: calc(50% - 1em);
       left: calc(50% - 1em);
-      animation: rotation 800ms linear;
+      animation: rotation 500ms linear;
     }
   }
 }
 article:hover span {
-  display: inline-block;
-  width: 80%;
+  display: block;
+  width: 85%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -598,37 +588,19 @@ article:hover span {
 article:hover .validation_du_plat {
   display: block;
   z-index: -1;
-  -webkit-animation: decalage_gauche 1s linear both;
-  animation: decalage_gauche 1s linear both;
+  -webkit-animation: decalage_gauche 0.3s linear forwards;
+  animation: decalage_gauche 0.3s linear forwards;
 }
 article:hover .prix {
-  -webkit-animation: decalage_gauche_prix 0.5s linear both;
-  animation: decalage_gauche_prix 0.5s linear both;
+  -webkit-animation: decalage_gauche_prix 0.3s linear forwards;
+  animation: decalage_gauche_prix 0.3s linear forwards;
 }
 .btn_action_commander {
   @extend.btn_action_explorer;
   margin-top: 10px;
   width: 225px;
 }
-@keyframes decalage_gauche {
-  0% {
-    z-index: -1;
-    right: -17%;
-    overflow: hidden;
-  }
-  100% {
-    right: -1;
-    z-index: 1;
-  }
-}
-@keyframes decalage_gauche_prix {
-  0% {
-    right: 0;
-  }
-  100% {
-    right: 15%;
-  }
-}
+
 .footer_pages {
   transform: translateY(-42px);
 }

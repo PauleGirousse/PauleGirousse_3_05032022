@@ -19,6 +19,41 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes opacite {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes decalage_gauche {
+  0% {
+    z-index: -1;
+    right: -17%;
+    overflow: hidden;
+  }
+  100% {
+    right: -1;
+    z-index: 1;
+  }
+}
+@keyframes decalage_gauche_prix {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 15%;
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -36,7 +71,7 @@ body > :not(.container) {
 }
 
 .container {
-  animation: opacite 1s ease-out forwards reverse 2s;
+  animation: opacite 1s ease-in forwards reverse 2s;
 }
 
 .loading_spinner {
@@ -44,10 +79,9 @@ body > :not(.container) {
   width: 100px;
   background-color: #9356dc;
   border-radius: 50%;
-  top: calc(50% - 50px);
+  top: calc(45% - 50px);
   left: calc(50% - 50px);
   position: fixed;
-  z-index: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -69,22 +103,13 @@ body > :not(.container) {
   border-bottom: 10px solid #ff79da;
   border-left: 10px solid #99e2d0;
   border-radius: 50%;
-  top: calc(50% - 60px);
+  top: calc(45% - 60px);
   left: calc(50% - 60px);
   position: fixed;
-  z-index: 1;
   animation: rotation 3s linear infinite;
   animation-direction: reverse;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .nav_logo {
   width: 200px;
   margin: 20px auto;
@@ -481,6 +506,11 @@ figure {
   opacity: 1;
 }
 
+.article .nom,
+.article .prix {
+  animation: opacite linear 2s;
+}
+
 .entrees,
 .plats,
 .desserts {
@@ -521,14 +551,6 @@ figure {
   animation: opacite 2s linear forwards 2s;
 }
 
-@keyframes opacite {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-  }
-}
 article {
   background-color: white;
   margin-top: 20px;
@@ -554,8 +576,10 @@ article .nom h4 {
   font-size: 2.1rem;
 }
 article .nom span {
+  min-width: 260px;
   font-weight: 100;
   font-size: 1.8rem;
+  display: block;
 }
 article .prix {
   font-weight: 500;
@@ -583,12 +607,12 @@ article .validation_du_plat .icone_validation {
   position: relative;
   top: calc(50% - 1em);
   left: calc(50% - 1em);
-  animation: rotation 800ms linear;
+  animation: rotation 500ms linear;
 }
 
 article:hover span {
-  display: inline-block;
-  width: 80%;
+  display: block;
+  width: 85%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -597,13 +621,13 @@ article:hover span {
 article:hover .validation_du_plat {
   display: block;
   z-index: -1;
-  -webkit-animation: decalage_gauche 1s linear both;
-  animation: decalage_gauche 1s linear both;
+  -webkit-animation: decalage_gauche 0.3s linear forwards;
+  animation: decalage_gauche 0.3s linear forwards;
 }
 
 article:hover .prix {
-  -webkit-animation: decalage_gauche_prix 0.5s linear both;
-  animation: decalage_gauche_prix 0.5s linear both;
+  -webkit-animation: decalage_gauche_prix 0.3s linear forwards;
+  animation: decalage_gauche_prix 0.3s linear forwards;
 }
 
 .btn_action_commander {
@@ -611,25 +635,6 @@ article:hover .prix {
   width: 225px;
 }
 
-@keyframes decalage_gauche {
-  0% {
-    z-index: -1;
-    right: -17%;
-    overflow: hidden;
-  }
-  100% {
-    right: -1;
-    z-index: 1;
-  }
-}
-@keyframes decalage_gauche_prix {
-  0% {
-    right: 0;
-  }
-  100% {
-    right: 15%;
-  }
-}
 .footer_pages {
   transform: translateY(-42px);
 }
