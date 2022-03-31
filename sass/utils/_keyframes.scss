@@ -19,12 +19,11 @@
 @keyframes decalage_gauche {
   0% {
     z-index: -1;
-    right: -17%;
-    overflow: hidden;
+    right: -25%;
   }
   100% {
-    right: -1;
     z-index: 1;
+    right: -1;
   }
 }
 
@@ -33,6 +32,6 @@
     right: 0;
   }
   100% {
-    right: 15%;
+    right: 16%;
   }
 }
