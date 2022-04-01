@@ -11,7 +11,7 @@ html {
 body {
   margin: 0 auto;
   font-size: 1.4em;
-  min-width: 450px;
+  min-width: 375px;
   max-width: 1200px;
 }
 body > :not(.container) {
@@ -61,7 +61,7 @@ body > :not(.container) {
 
 // BARRE DE NAVIGATION
 .nav_logo {
-  width: 200px;
+  width: 165px;
   margin: 20px auto;
   display: block;
 }
@@ -73,7 +73,7 @@ header {
   align-items: center;
   .entree_ville {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: "Roboto", sans-serif;
     padding-top: 20px;
     -webkit-box-shadow: inset 0px 15px 18px -8px rgba(0, 0, 0, 0.33);
@@ -87,6 +87,7 @@ header {
     }
   }
   h1 {
+    font-size: 2.3rem;
     text-align: center;
     padding: 0 70px;
     margin-top: 50px;
@@ -94,18 +95,18 @@ header {
   }
   p {
     font-weight: 400;
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     color: grey;
     text-align: center;
-    padding: 0 40px;
+    padding: 0 20px;
   }
 }
 
 .btn_action_explorer {
   height: 60px;
-  width: 260px;
+  width: 215px;
   background: linear-gradient(170deg, #ff79da 20%, #9356dc);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: white;
   border-radius: 50px;
   border: 1px;
@@ -113,7 +114,8 @@ header {
   margin: 10px auto 7rem auto;
   position: relative;
   z-index: 1;
-  &:hover {
+  &:hover,
+  &:active {
     cursor: pointer;
     box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.75);
     &::after {
@@ -154,38 +156,39 @@ header {
     }
     li::before {
       content: counter(li);
-      height: 30px;
-      width: 30px;
+      height: 20px;
+      width: 20px;
       color: white;
       background-color: $color-primary;
       border-radius: 50%;
       display: inline-block;
-      margin-left: -1em;
-      margin-top: 2em;
+      margin-left: -0.7em;
+      margin-top: 1em;
       text-align: center;
-      padding-top: 0.5em;
+      padding-top: 0.2em;
     }
     li {
       counter-increment: li;
-      height: 80px;
-      min-width: 380px;
+      height: 70px;
+      min-width: 325px;
       background-color: lighten($color: black, $amount: 95%);
       box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
       border-radius: 25px;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
       @include flex_row;
       align-items: baseline;
       cursor: pointer;
       p {
         color: $color-icons;
         padding-left: 1.5em;
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
       h4 {
-        font-size: 1.3em;
+        font-size: 1.3rem;
         padding-left: 2em;
       }
-      &:hover {
+      &:hover,
+      &:active {
         @include lighten($color-primary);
         p {
           color: $color-primary;
@@ -196,7 +199,7 @@ header {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 2.3rem;
   align-self: flex-start;
 }
 // RESTAURANTS
@@ -227,7 +230,7 @@ h2 {
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   width: 48%;
-  min-width: 408px;
+  min-width: 335px;
   max-width: 580px;
   flex-grow: 1;
   position: relative;
@@ -235,7 +238,7 @@ h2 {
     width: 100%;
     margin: 0;
     img {
-      height: 200px;
+      height: 175px;
       width: 100%;
       object-fit: cover;
       object-position: 50% 98%;
@@ -247,16 +250,16 @@ h2 {
     }
   }
   .encadre {
-    height: 33px;
-    width: 95px;
-    font-size: 1.7rem;
+    height: 30px;
+    width: 80px;
+    font-size: 1.3rem;
     font-weight: bold;
     color: darken($color-tertiary, 45);
     background-color: darken($color-tertiary, 10);
     padding-top: 7px;
     text-align: center;
     position: absolute;
-    right: 20px;
+    right: 15px;
     top: 20px;
   }
 }
@@ -267,33 +270,31 @@ figcaption {
   @include flex_row;
   justify-content: space-between;
   .details_figcaption {
-    @include flex_column;
-    padding-left: 20px;
-    margin-top: 0;
-  }
-  h3 {
-    font-size: 2.1rem;
-    margin-bottom: 0;
-    &::first-letter {
-      text-transform: uppercase;
-    }
-  }
-  span {
-    margin-top: 5px;
-  }
-  div {
+    font-size: 1.7rem;
     font-weight: 100;
-    font-size: 2rem;
-    margin: 5px 0 20px 0;
+    @include flex_column;
+    margin: 0px 0 15px 0;
+    padding-left: 15px;
+    h3 {
+      font-size: 1.7rem;
+      margin-bottom: 0;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    span {
+      margin-top: 2px;
+    }
   }
 }
 
-// .animation_coeur {
-//   position: relative;
-//   cursor: pointer;
-// }
+.animation_coeur {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
 .icone_vide {
-  font-size: 3rem;
+  font-size: 2rem;
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -303,7 +304,7 @@ figcaption {
   opacity: 0;
 }
 .icone_plein {
-  font-size: 3rem;
+  font-size: 2rem;
   color: transparent;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -327,7 +328,7 @@ footer {
   background-color: lighten($color: black, $amount: 20%);
   @include flex_column;
   img {
-    width: 110px;
+    width: 100px;
     margin-top: 30px;
     margin-left: 40px;
     filter: invert(100%);
@@ -335,7 +336,7 @@ footer {
   a {
     color: white;
     line-height: 1.8;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 a,
@@ -350,7 +351,7 @@ li {
     width: 10px;
     font-size: 1.4rem;
     color: white;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
 
@@ -363,7 +364,7 @@ li {
     width: 20px;
     font-size: 2rem;
     position: absolute;
-    top: 30px;
+    top: 25px;
     left: 30px;
   }
 }
@@ -372,15 +373,12 @@ figure {
   margin: 0;
 }
 .img_pages {
-  height: 300px;
+  height: 260px;
   width: 100%;
   object-fit: cover;
-  &.img_page2 {
-    object-position: 50% 46%;
-  }
 }
 .menu {
-  transform: translateY(-3%);
+  transform: translateY(-50px);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   @include flex_column;
@@ -388,30 +386,34 @@ figure {
 }
 
 .titre_pages {
-  padding-left: 30px;
+  padding-left: 20px;
   padding-right: 15px;
   @include flex_row;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: nowrap;
   h3 {
-    font-size: 3.1rem;
+    font-size: 2.7rem;
     margin-top: 40px;
+    padding-right: 20px;
     &::first-letter {
       text-transform: uppercase;
     }
   }
-  .animation_coeur {
+
+  .pages_animation_coeur {
     position: relative;
     cursor: pointer;
   }
   .pages_icone_vide {
+    margin-right: 20px;
     font-size: 3rem;
-    position: absolute;
-    top: -30px;
-    right: 30px;
+    // position: absolute;
+    // top: -30px;
+    // right: 30px;
     z-index: 1;
   }
-  .animation_coeur:hover .pages_icone_vide {
+  .pages_animation_coeur:hover .pages_icone_vide {
     opacity: 0;
   }
   .pages_icone_plein {
@@ -421,12 +423,12 @@ figure {
     -webkit-background-clip: text;
     background-clip: text;
     position: absolute;
-    top: -30px;
-    right: 30px;
+    top: 0px;
+    right: 20px;
     opacity: 0;
     transition: opacity ease 1s;
   }
-  .animation_coeur:hover .pages_icone_plein {
+  .pages_animation_coeur:hover .pages_icone_plein {
     opacity: 1;
   }
 }
@@ -442,12 +444,13 @@ figure {
 .entrees,
 .plats,
 .desserts {
-  margin: 0 15px;
+  margin: 0 12.5px;
   margin-bottom: 40px;
   opacity: 0;
 
-  > p {
-    font-size: 2rem;
+  & > p {
+    font-weight: 100;
+    font-size: 1.7rem;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 25px;
@@ -455,7 +458,7 @@ figure {
     position: relative;
     &:after {
       content: "";
-      width: 50px;
+      width: 4rem;
       border-bottom: 4px solid $color-tertiary;
       position: absolute;
       bottom: -10px;
@@ -478,8 +481,9 @@ figure {
 }
 
 article {
+  min-width: 350px;
   background-color: white;
-  margin-top: 20px;
+  margin-top: 15px;
   border-radius: 15px;
   -webkit-box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
   box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
@@ -489,24 +493,26 @@ article {
   align-items: flex-end;
   position: relative;
   overflow: hidden;
+
   .nom {
     margin-bottom: 15px;
     padding-left: 10px;
     h4 {
-      font-size: 2.1rem;
+      font-size: 1.8rem;
       font-weight: 500;
       margin-top: 15px;
+      margin-right: 50px;
       margin-bottom: 5px;
     }
     span {
-      min-width: 260px;
-      font-size: 1.8rem;
+      // min-width: 260px;
+      font-size: 1.4rem;
       font-weight: 100;
-      display: block;
+      // display: block;
     }
   }
   .prix {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 500;
     margin-right: 30px;
     margin-bottom: 15px;
@@ -523,9 +529,10 @@ article {
     display: none;
     position: absolute;
     right: 0;
+
     .icone_validation {
-      height: 25px;
-      width: 25px;
+      height: 20px;
+      width: 20px;
       fill: white;
       position: relative;
       top: calc(50% - 1em);
@@ -554,10 +561,10 @@ article:hover .prix {
 }
 .btn_action_commander {
   @extend.btn_action_explorer;
-  width: 225px;
+  width: 185px;
   margin-top: 10px;
 }
 
 .footer_pages {
-  transform: translateY(-42px);
+  transform: translateY(-50px);
 }

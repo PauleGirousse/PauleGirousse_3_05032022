@@ -60,7 +60,7 @@ html {
 body {
   margin: 0 auto;
   font-size: 1.4em;
-  min-width: 450px;
+  min-width: 375px;
   max-width: 1200px;
 }
 
@@ -114,7 +114,7 @@ body > :not(.container) {
 }
 
 .nav_logo {
-  width: 200px;
+  width: 165px;
   margin: 20px auto;
   display: block;
 }
@@ -128,7 +128,7 @@ header {
 }
 header .entree_ville {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   padding-top: 20px;
   -webkit-box-shadow: inset 0px 15px 18px -8px rgba(0, 0, 0, 0.33);
@@ -142,6 +142,7 @@ header .entree_ville .icone_lieu {
   padding-right: 10px;
 }
 header h1 {
+  font-size: 2.3rem;
   text-align: center;
   padding: 0 70px;
   margin-top: 50px;
@@ -149,17 +150,17 @@ header h1 {
 }
 header p {
   font-weight: 400;
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   color: grey;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .btn_action_explorer, .btn_action_commander {
   height: 60px;
-  width: 260px;
+  width: 215px;
   background: linear-gradient(170deg, #ff79da 20%, #9356dc);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: white;
   border-radius: 50px;
   border: 1px;
@@ -168,11 +169,11 @@ header p {
   position: relative;
   z-index: 1;
 }
-.btn_action_explorer:hover, .btn_action_commander:hover {
+.btn_action_explorer:hover, .btn_action_commander:hover, .btn_action_explorer:active, .btn_action_commander:active {
   cursor: pointer;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.75);
 }
-.btn_action_explorer:hover::after, .btn_action_commander:hover::after {
+.btn_action_explorer:hover::after, .btn_action_commander:hover::after, .btn_action_explorer:active::after, .btn_action_commander:active::after {
   opacity: 1;
 }
 .btn_action_explorer::after, .btn_action_commander::after {
@@ -211,25 +212,25 @@ header p {
 }
 .fonctionnement ol li::before {
   content: counter(li);
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   color: white;
   background-color: #9356dc;
   border-radius: 50%;
   display: inline-block;
-  margin-left: -1em;
-  margin-top: 2em;
+  margin-left: -0.7em;
+  margin-top: 1em;
   text-align: center;
-  padding-top: 0.5em;
+  padding-top: 0.2em;
 }
 .fonctionnement ol li {
   counter-increment: li;
-  height: 80px;
-  min-width: 380px;
+  height: 70px;
+  min-width: 325px;
   background-color: #f2f2f2;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   border-radius: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -239,21 +240,21 @@ header p {
 .fonctionnement ol li p {
   color: rgba(0, 0, 0, 0.5);
   padding-left: 1.5em;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 .fonctionnement ol li h4 {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   padding-left: 2em;
 }
-.fonctionnement ol li:hover {
+.fonctionnement ol li:hover, .fonctionnement ol li:active {
   background-color: #e4d5f6;
 }
-.fonctionnement ol li:hover p {
+.fonctionnement ol li:hover p, .fonctionnement ol li:active p {
   color: #9356dc;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 2.3rem;
   align-self: flex-start;
 }
 
@@ -290,7 +291,7 @@ h2 {
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   width: 48%;
-  min-width: 408px;
+  min-width: 335px;
   max-width: 580px;
   flex-grow: 1;
   position: relative;
@@ -300,7 +301,7 @@ h2 {
   margin: 0;
 }
 .pages figure img {
-  height: 200px;
+  height: 175px;
   width: 100%;
   object-fit: cover;
   object-position: 50% 98%;
@@ -311,16 +312,16 @@ h2 {
   object-position: 50% 62%;
 }
 .pages .encadre {
-  height: 33px;
-  width: 95px;
-  font-size: 1.7rem;
+  height: 30px;
+  width: 80px;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #217460;
   background-color: #71d7be;
   padding-top: 7px;
   text-align: center;
   position: absolute;
-  right: 20px;
+  right: 15px;
   top: 20px;
 }
 
@@ -334,29 +335,32 @@ figcaption {
   justify-content: space-between;
 }
 figcaption .details_figcaption {
+  font-size: 1.7rem;
+  font-weight: 100;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  margin-top: 0;
+  margin: 0px 0 15px 0;
+  padding-left: 15px;
 }
-figcaption h3 {
-  font-size: 2.1rem;
+figcaption .details_figcaption h3 {
+  font-size: 1.7rem;
   margin-bottom: 0;
 }
-figcaption h3::first-letter {
+figcaption .details_figcaption h3::first-letter {
   text-transform: uppercase;
 }
-figcaption span {
-  margin-top: 5px;
+figcaption .details_figcaption span {
+  margin-top: 2px;
 }
-figcaption div {
-  font-weight: 100;
-  font-size: 2rem;
-  margin: 5px 0 20px 0;
+
+.animation_coeur {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .icone_vide {
-  font-size: 3rem;
+  font-size: 2rem;
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -368,7 +372,7 @@ figcaption div {
 }
 
 .icone_plein {
-  font-size: 3rem;
+  font-size: 2rem;
   color: transparent;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -395,7 +399,7 @@ footer {
   flex-direction: column;
 }
 footer img {
-  width: 110px;
+  width: 100px;
   margin-top: 30px;
   margin-left: 40px;
   filter: invert(100%);
@@ -403,7 +407,7 @@ footer img {
 footer a {
   color: white;
   line-height: 1.8;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 a,
@@ -420,7 +424,7 @@ li i {
   width: 10px;
   font-size: 1.4rem;
   color: white;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .header_pages {
@@ -431,7 +435,7 @@ li i {
   width: 20px;
   font-size: 2rem;
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 30px;
 }
 
@@ -440,16 +444,13 @@ figure {
 }
 
 .img_pages {
-  height: 300px;
+  height: 260px;
   width: 100%;
   object-fit: cover;
 }
-.img_pages.img_page2 {
-  object-position: 50% 46%;
-}
 
 .menu {
-  transform: translateY(-3%);
+  transform: translateY(-50px);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   display: flex;
@@ -458,33 +459,33 @@ figure {
 }
 
 .titre_pages {
-  padding-left: 30px;
+  padding-left: 20px;
   padding-right: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: nowrap;
 }
 .titre_pages h3 {
-  font-size: 3.1rem;
+  font-size: 2.7rem;
   margin-top: 40px;
+  padding-right: 20px;
 }
 .titre_pages h3::first-letter {
   text-transform: uppercase;
 }
-.titre_pages .animation_coeur {
+.titre_pages .pages_animation_coeur {
   position: relative;
   cursor: pointer;
 }
 .titre_pages .pages_icone_vide {
+  margin-right: 20px;
   font-size: 3rem;
-  position: absolute;
-  top: -30px;
-  right: 30px;
   z-index: 1;
 }
-.titre_pages .animation_coeur:hover .pages_icone_vide {
+.titre_pages .pages_animation_coeur:hover .pages_icone_vide {
   opacity: 0;
 }
 .titre_pages .pages_icone_plein {
@@ -494,12 +495,12 @@ figure {
   -webkit-background-clip: text;
   background-clip: text;
   position: absolute;
-  top: -30px;
-  right: 30px;
+  top: 0px;
+  right: 20px;
   opacity: 0;
   transition: opacity ease 1s;
 }
-.titre_pages .animation_coeur:hover .pages_icone_plein {
+.titre_pages .pages_animation_coeur:hover .pages_icone_plein {
   opacity: 1;
 }
 
@@ -512,14 +513,15 @@ figure {
 .entrees,
 .plats,
 .desserts {
-  margin: 0 15px;
+  margin: 0 12.5px;
   margin-bottom: 40px;
   opacity: 0;
 }
 .entrees > p,
 .plats > p,
 .desserts > p {
-  font-size: 2rem;
+  font-weight: 100;
+  font-size: 1.7rem;
   text-transform: uppercase;
   margin-top: 15px;
   margin-bottom: 25px;
@@ -530,7 +532,7 @@ figure {
 .plats > p:after,
 .desserts > p:after {
   content: "";
-  width: 50px;
+  width: 4rem;
   border-bottom: 4px solid #99e2d0;
   position: absolute;
   bottom: -10px;
@@ -553,8 +555,9 @@ figure {
 }
 
 article {
+  min-width: 350px;
   background-color: white;
-  margin-top: 20px;
+  margin-top: 15px;
   border-radius: 15px;
   -webkit-box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
   box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
@@ -572,19 +575,18 @@ article .nom {
   padding-left: 10px;
 }
 article .nom h4 {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   font-weight: 500;
   margin-top: 15px;
+  margin-right: 50px;
   margin-bottom: 5px;
 }
 article .nom span {
-  min-width: 260px;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 100;
-  display: block;
 }
 article .prix {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   margin-right: 30px;
   margin-bottom: 15px;
@@ -603,8 +605,8 @@ article .validation_du_plat {
   right: 0;
 }
 article .validation_du_plat .icone_validation {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   fill: white;
   position: relative;
   top: calc(50% - 1em);
@@ -634,12 +636,12 @@ article:hover .prix {
 }
 
 .btn_action_commander {
-  width: 225px;
+  width: 185px;
   margin-top: 10px;
 }
 
 .footer_pages {
-  transform: translateY(-42px);
+  transform: translateY(-50px);
 }
 
 /*# sourceMappingURL=style.css.map */
