@@ -71,6 +71,7 @@ header {
   background-color: lighten($color: black, $amount: 95%);
   @include flex_column;
   align-items: center;
+
   .entree_ville {
     width: 100%;
     font-size: 1.6rem;
@@ -81,6 +82,7 @@ header {
     height: 60px;
     background-color: $background-color-medium;
     text-align: center;
+
     .icone_lieu {
       font-size: 2rem;
       padding-right: 10px;
@@ -114,6 +116,7 @@ header {
   margin: 10px auto 7rem auto;
   position: relative;
   z-index: 1;
+
   &:hover,
   &:active {
     cursor: pointer;
@@ -149,6 +152,7 @@ header {
     list-style: none;
     counter-reset: li;
     padding-left: 5px;
+
     @media screen and (min-width: 1000px) {
       @include flex_row;
       column-gap: 40px;
@@ -176,6 +180,7 @@ header {
       border-radius: 25px;
       margin-bottom: 25px;
       @include flex_row;
+      align-content: center;
       align-items: baseline;
       cursor: pointer;
       p {
@@ -212,10 +217,12 @@ h2 {
   background-color: lighten($color: black, $amount: 95%);
   @include flex_column;
   align-items: center;
+
   .sans_titre {
     width: 100%;
     @include flex_column;
     align-items: center;
+
     @media screen and (min-width: 880px) {
       @include flex_row;
       justify-content: space-between;
@@ -497,6 +504,7 @@ article {
   .nom {
     margin-bottom: 15px;
     padding-left: 10px;
+
     h4 {
       font-size: 1.8rem;
       font-weight: 500;
@@ -505,10 +513,8 @@ article {
       margin-bottom: 5px;
     }
     span {
-      // min-width: 260px;
       font-size: 1.4rem;
       font-weight: 100;
-      // display: block;
     }
   }
   .prix {
@@ -535,19 +541,21 @@ article {
       width: 20px;
       fill: white;
       position: relative;
-      top: calc(50% - 1em);
-      left: calc(50% - 1em);
+      top: calc(50% - 1rem);
+      left: calc(50% - 1rem);
       -webkit-animation: rotation 500ms linear;
       animation: rotation 500ms linear;
     }
   }
 }
-article:hover span {
-  width: 85%;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+@media screen and (max-width: 400px) {
+  article:hover span {
+    width: 85%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 article:hover .validation_du_plat {
   display: block;

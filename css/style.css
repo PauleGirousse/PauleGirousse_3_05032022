@@ -234,6 +234,7 @@ header p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: center;
   align-items: baseline;
   cursor: pointer;
 }
@@ -609,20 +610,21 @@ article .validation_du_plat .icone_validation {
   width: 20px;
   fill: white;
   position: relative;
-  top: calc(50% - 1em);
-  left: calc(50% - 1em);
+  top: calc(50% - 1rem);
+  left: calc(50% - 1rem);
   -webkit-animation: rotation 500ms linear;
   animation: rotation 500ms linear;
 }
 
-article:hover span {
-  width: 85%;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+@media screen and (max-width: 400px) {
+  article:hover span {
+    width: 85%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
-
 article:hover .validation_du_plat {
   display: block;
   z-index: -1;
