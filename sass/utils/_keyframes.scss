@@ -15,23 +15,3 @@
     opacity: 1;
   }
 }
-
-@keyframes decalage_gauche {
-  0% {
-    z-index: -1;
-    right: -25%;
-  }
-  100% {
-    z-index: 1;
-    right: -1;
-  }
-}
-
-@keyframes decalage_gauche_prix {
-  0% {
-    right: 0;
-  }
-  100% {
-    right: 16%;
-  }
-}

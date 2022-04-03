@@ -504,17 +504,25 @@ article {
   .nom {
     margin-bottom: 15px;
     padding-left: 10px;
+    @include flex_column;
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: 380px) {
+      max-width: 280px;
+    }
 
     h4 {
       font-size: 1.8rem;
       font-weight: 500;
       margin-top: 15px;
-      margin-right: 50px;
-      margin-bottom: 5px;
+      // margin-right: 50px;
+      // margin-bottom: 5px;
+      margin-bottom: 0;
     }
     span {
       font-size: 1.4rem;
       font-weight: 100;
+      flex-grow: 1;
     }
   }
   .prix {
@@ -528,13 +536,16 @@ article {
   .validation_du_plat {
     height: 100%;
     width: 17%;
+    width: 0;
     background-color: $color-tertiary;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    z-index: -1;
-    display: none;
+    // z-index: -1;
+    // display: none;
     position: absolute;
     right: 0;
+    transform: translateX(0);
+    transition: width 0.3s;
 
     .icone_validation {
       height: 20px;
@@ -543,14 +554,16 @@ article {
       position: relative;
       top: calc(50% - 1rem);
       left: calc(50% - 1rem);
-      -webkit-animation: rotation 500ms linear;
-      animation: rotation 500ms linear;
+      // -webkit-animation: rotation 500ms linear;
+      // animation: rotation 500ms linear;
+      transform: rotate(0);
+      transition: transform 1s;
     }
   }
 }
 @media screen and (max-width: 400px) {
   article:hover span {
-    width: 85%;
+    width: 210px;
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -558,11 +571,39 @@ article {
   }
 }
 article:hover .validation_du_plat {
+  width: 17%;
   display: block;
-  z-index: -1;
-  -webkit-animation: decalage_gauche 0.3s linear forwards;
-  animation: decalage_gauche 0.3s linear forwards;
+  z-index: 1;
+  right: 0;
+  transform: translate(0);
+  // -webkit-animation: decalage_gauche 0.3s linear forwards;
+  // animation: decalage_gauche 0.3s linear forwards;
+  .icone_validation {
+    width: 20px;
+    z-index: 1;
+    transform: rotate(360deg);
+  }
 }
+// @keyframes decalage_gauche {
+//   0% {
+//     z-index: -1;
+//     right: -25%;
+//   }
+//   100% {
+//     z-index: 1;
+//     right: -1;
+//   }
+// }
+
+@keyframes decalage_gauche_prix {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 16%;
+  }
+}
+
 article:hover .prix {
   -webkit-animation: decalage_gauche_prix 0.3s linear forwards;
   animation: decalage_gauche_prix 0.3s linear forwards;
