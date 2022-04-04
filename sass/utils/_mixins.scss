@@ -1,8 +1,8 @@
-@mixin flex_middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// @mixin flex_middle {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 @mixin flex_column {
   display: flex;
@@ -16,4 +16,23 @@
 }
 @mixin lighten($color) {
   background-color: lighten($color, $amount: 30%);
+}
+@mixin breakpoint($name) {
+  @if $name == "xsmall" {
+    @media screen and (max-width: 400px) {
+      @content;
+    }
+  } @else if $name == "small" {
+    @media screen and (min-width: 381px) and (max-width: 779px) {
+      @content;
+    }
+  } @else if $name == "medium" {
+    @media screen and (min-width: 880px) {
+      @content;
+    }
+  } @else if $name == "large" {
+    @media screen and (min-width: 1000px) {
+      @content;
+    }
+  }
 }

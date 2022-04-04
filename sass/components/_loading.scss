@@ -1,0 +1,44 @@
+body > :not(.container) {
+  opacity: 0;
+  -webkit-animation: opacite 3s linear forwards;
+  animation: opacite 3s linear forwards;
+}
+.container {
+  -webkit-animation: opacite 3s ease-in forwards reverse 3s;
+  animation: opacite 3s ease-in forwards reverse 3s;
+}
+
+.loading_spinner {
+  height: 100px;
+  width: 100px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  top: calc(45% - 50px);
+  left: calc(50% - 50px);
+  position: fixed;
+  @include flex_row;
+  justify-content: center;
+  align-items: center;
+  animation: rotation 3s linear infinite;
+  i {
+    font-size: 50px;
+    color: $color-tertiary;
+    display: block;
+  }
+}
+.cercle {
+  width: 120px;
+  height: 120px;
+  border-top: 10px solid $color-secondary;
+  border-right: 10px solid $color-tertiary;
+  border-bottom: 10px solid $color-secondary;
+  border-left: 10px solid $color-tertiary;
+  border-radius: 50%;
+  top: calc(45% - 60px);
+  left: calc(50% - 60px);
+  position: fixed;
+  -webkit-animation: rotation 3s linear infinite;
+  animation: rotation 3s linear infinite;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
