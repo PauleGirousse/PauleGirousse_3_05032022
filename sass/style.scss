@@ -25,7 +25,7 @@ header {
     font-size: 1.6rem;
     font-family: "Roboto", sans-serif;
     padding-top: 20px;
-    -webkit-box-shadow: inset 0px 15px 18px -8px rgba(0, 0, 0, 0.33);
+    // -webkit-box-shadow: inset 0px 15px 18px -8px rgba(0, 0, 0, 0.33);
     box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.33);
     height: 60px;
     background-color: $background-color-medium;
@@ -44,9 +44,9 @@ header {
     margin-bottom: 0;
   }
   p {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.6rem;
-    color: grey;
+    color: $color-icons;
     text-align: center;
     padding: 0 20px;
   }
@@ -62,8 +62,8 @@ header {
     counter-reset: li;
     padding-left: 5px;
 
-    @media screen and (min-width: 1000px) {
-      // @include breakpoint(large) {
+    // @media screen and (min-width: 1000px) {
+    @include breakpoint(large) {
       @include flex_row;
       column-gap: 40px;
       justify-content: center;
@@ -76,16 +76,17 @@ header {
       background-color: $color-primary;
       border-radius: 50%;
       display: inline-block;
-      margin-left: -0.7em;
-      margin-top: 1em;
+      margin-left: -0.5rem;
       text-align: center;
-      padding-top: 0.2em;
+
+      padding-top: 0.1em;
     }
     li {
       counter-increment: li;
       height: 70px;
       min-width: 325px;
-      background-color: lighten($color: black, $amount: 95%);
+      // background-color: lighten($color: black, $amount: 95%);
+      background-color: $background-color-base;
       box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
       border-radius: 25px;
       margin-bottom: 25px;
@@ -124,7 +125,8 @@ h2 {
   padding-right: 20px;
   padding-bottom: 50px;
   width: 100%;
-  background-color: lighten($color: black, $amount: 95%);
+  // background-color: lighten($color: black, $amount: 95%);
+  background-color: $background-color-base;
   @include flex_column;
   align-items: center;
 
@@ -214,6 +216,7 @@ h2 {
 }
 .icone_vide {
   font-size: 2rem;
+  color: $color-icons;
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -232,7 +235,7 @@ h2 {
   bottom: 30px;
   right: 30px;
   opacity: 0;
-  transition: opacity 1s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 .animation_coeur:hover .icone_plein {
   opacity: 1;
@@ -297,11 +300,14 @@ figure {
   object-fit: cover;
 }
 .menu {
-  transform: translateY(-50px);
+  // transform: translateY(-50px);
+  margin-top: -50px;
+  position: relative;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   @include flex_column;
-  background-color: lighten($color: black, $amount: 95%);
+  // background-color: lighten($color: black, $amount: 95%);
+  background-color: $background-color-base;
 }
 
 .titre_pages {
@@ -325,6 +331,7 @@ figure {
     cursor: pointer;
   }
   .pages_icone_vide {
+    color: $color-icons;
     margin-right: 20px;
     font-size: 3rem;
     z-index: 1;
@@ -342,7 +349,7 @@ figure {
     top: 0px;
     right: 20px;
     opacity: 0;
-    transition: opacity ease 1s;
+    transition: opacity ease 0.5s;
   }
   .pages_animation_coeur:hover .pages_icone_plein {
     opacity: 1;
@@ -352,7 +359,7 @@ figure {
 .article {
   .nom,
   .prix {
-    -webkit-animation: opacite linear 2s;
+    // -webkit-animation: opacite linear 2s;
     animation: opacite linear 2s;
   }
 }
@@ -384,15 +391,15 @@ figure {
 }
 
 .entrees {
-  -webkit-animation: opacite 2s linear forwards;
+  // -webkit-animation: opacite 2s linear forwards;
   animation: opacite 2s linear forwards;
 }
 .plats {
-  -webkit-animation: opacite 2s linear forwards 1s;
+  // -webkit-animation: opacite 2s linear forwards 1s;
   animation: opacite 2s linear forwards 1s;
 }
 .desserts {
-  -webkit-animation: opacite 2s linear forwards 2s;
+  // -webkit-animation: opacite 2s linear forwards 2s;
   animation: opacite 2s linear forwards 2s;
 }
 
@@ -401,7 +408,7 @@ article {
   background-color: white;
   margin-top: 15px;
   border-radius: 15px;
-  -webkit-box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
+  // -webkit-box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
   box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
   cursor: pointer;
   @include flex_row;
@@ -445,7 +452,6 @@ article {
   }
   .validation_du_plat {
     height: 100%;
-    width: 17%;
     width: 0;
     background-color: $color-tertiary;
     border-top-right-radius: 15px;
@@ -469,13 +475,14 @@ article {
   }
 }
 @media screen and (max-width: 400px) {
-  // @include breakpoint(xsmall) {
-  article:hover span {
-    width: 210px;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  @include breakpoint(small) {
+    article span {
+      width: 200px;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 article:hover .validation_du_plat {
@@ -501,10 +508,10 @@ article:hover .validation_du_plat {
 }
 
 article:hover .prix {
-  -webkit-animation: decalage_gauche_prix 0.2s linear forwards;
+  // -webkit-animation: decalage_gauche_prix 0.2s linear forwards;
   animation: decalage_gauche_prix 0.2s linear forwards;
 }
 
-.footer_pages {
-  transform: translateY(-50px);
-}
+// .footer_pages {
+//   transform: translateY(-50px);
+// }

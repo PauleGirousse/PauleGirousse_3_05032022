@@ -18,12 +18,8 @@
   background-color: lighten($color, $amount: 30%);
 }
 @mixin breakpoint($name) {
-  @if $name == "xsmall" {
+  @if $name == "small" {
     @media screen and (max-width: 400px) {
-      @content;
-    }
-  } @else if $name == "small" {
-    @media screen and (min-width: 381px) and (max-width: 779px) {
       @content;
     }
   } @else if $name == "medium" {

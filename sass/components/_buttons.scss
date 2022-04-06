@@ -1,6 +1,9 @@
 .btn_action_explorer {
   height: 60px;
   width: 215px;
+  @include breakpoint(medium) {
+    width: 250px;
+  }
   background: linear-gradient(170deg, #ff79da 20%, #9356dc);
   font-size: 1.6rem;
   color: white;

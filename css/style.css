@@ -27,8 +27,19 @@ html {
 html {
   font-size: 62.5%;
 }
+@media screen and (min-width: 880px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
+  padding: 0;
   margin: 0 auto;
   font-size: 1.4em;
   min-width: 375px;
@@ -37,8 +48,6 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 .logo,
@@ -58,6 +67,11 @@ body {
   margin: 10px auto 7rem auto;
   position: relative;
   z-index: 1;
+}
+@media screen and (min-width: 880px) {
+  .btn_action_explorer, .btn_action_commander {
+    width: 250px;
+  }
 }
 .btn_action_explorer:hover, .btn_action_commander:hover, .btn_action_explorer:active, .btn_action_commander:active {
   cursor: pointer;
@@ -154,10 +168,9 @@ header .entree_ville {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   padding-top: 20px;
-  -webkit-box-shadow: inset 0px 15px 18px -8px rgba(0, 0, 0, 0.33);
   box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.33);
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
   text-align: center;
 }
 header .entree_ville .icone_lieu {
@@ -172,9 +185,9 @@ header h1 {
   margin-bottom: 0;
 }
 header p {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.6rem;
-  color: grey;
+  color: gray;
   text-align: center;
   padding: 0 20px;
 }
@@ -208,10 +221,9 @@ header p {
   background-color: #9356dc;
   border-radius: 50%;
   display: inline-block;
-  margin-left: -0.7em;
-  margin-top: 1em;
+  margin-left: -0.5rem;
   text-align: center;
-  padding-top: 0.2em;
+  padding-top: 0.1em;
 }
 .fonctionnement ol li {
   counter-increment: li;
@@ -229,7 +241,7 @@ header p {
   cursor: pointer;
 }
 .fonctionnement ol li p {
-  color: rgba(0, 0, 0, 0.5);
+  color: gray;
   padding-left: 1.5em;
   font-size: 2rem;
 }
@@ -352,6 +364,7 @@ h2 {
 
 .icone_vide {
   font-size: 2rem;
+  color: gray;
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -372,7 +385,7 @@ h2 {
   bottom: 30px;
   right: 30px;
   opacity: 0;
-  transition: opacity 1s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .animation_coeur:hover .icone_plein {
@@ -441,7 +454,8 @@ figure {
 }
 
 .menu {
-  transform: translateY(-50px);
+  margin-top: -50px;
+  position: relative;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   display: flex;
@@ -472,6 +486,7 @@ figure {
   cursor: pointer;
 }
 .titre_pages .pages_icone_vide {
+  color: gray;
   margin-right: 20px;
   font-size: 3rem;
   z-index: 1;
@@ -489,7 +504,7 @@ figure {
   top: 0px;
   right: 20px;
   opacity: 0;
-  transition: opacity ease 1s;
+  transition: opacity ease 0.5s;
 }
 .titre_pages .pages_animation_coeur:hover .pages_icone_plein {
   opacity: 1;
@@ -497,7 +512,6 @@ figure {
 
 .article .nom,
 .article .prix {
-  -webkit-animation: opacite linear 2s;
   animation: opacite linear 2s;
 }
 
@@ -531,17 +545,14 @@ figure {
 }
 
 .entrees {
-  -webkit-animation: opacite 2s linear forwards;
   animation: opacite 2s linear forwards;
 }
 
 .plats {
-  -webkit-animation: opacite 2s linear forwards 1s;
   animation: opacite 2s linear forwards 1s;
 }
 
 .desserts {
-  -webkit-animation: opacite 2s linear forwards 2s;
   animation: opacite 2s linear forwards 2s;
 }
 
@@ -550,7 +561,6 @@ article {
   background-color: white;
   margin-top: 15px;
   border-radius: 15px;
-  -webkit-box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
   box-shadow: -2px 2px 14px 3px rgba(0, 0, 0, 0.11);
   cursor: pointer;
   display: flex;
@@ -594,7 +604,6 @@ article .prix {
 }
 article .validation_du_plat {
   height: 100%;
-  width: 17%;
   width: 0;
   background-color: #99e2d0;
   border-top-right-radius: 15px;
@@ -614,9 +623,9 @@ article .validation_du_plat .icone_validation {
   transition: transform 0.5s;
 }
 
-@media screen and (max-width: 400px) {
-  article:hover span {
-    width: 210px;
+@media screen and (max-width: 400px) and (max-width: 400px) {
+  article span {
+    width: 200px;
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -644,12 +653,7 @@ article:hover .validation_du_plat .icone_validation {
   }
 }
 article:hover .prix {
-  -webkit-animation: decalage_gauche_prix 0.2s linear forwards;
   animation: decalage_gauche_prix 0.2s linear forwards;
-}
-
-.footer_pages {
-  transform: translateY(-50px);
 }
 
 /*# sourceMappingURL=style.css.map */
