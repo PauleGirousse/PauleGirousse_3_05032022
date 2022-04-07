@@ -64,6 +64,7 @@ body {
   border-radius: 50px;
   border: 1px;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
   margin: 10px auto 7rem auto;
   position: relative;
   z-index: 1;
@@ -74,8 +75,8 @@ body {
   }
 }
 .btn_action_explorer:hover, .btn_action_commander:hover, .btn_action_explorer:active, .btn_action_commander:active {
-  cursor: pointer;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
 }
 .btn_action_explorer:hover::after, .btn_action_commander:hover::after, .btn_action_explorer:active::after, .btn_action_commander:active::after {
   opacity: 1;
@@ -88,7 +89,6 @@ body {
   bottom: 0;
   left: 0;
   border-radius: 50px;
-  background: linear-gradient(170deg, #ff93e1, #a16be0);
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
@@ -101,12 +101,10 @@ body {
 
 body > :not(.container) {
   opacity: 0;
-  -webkit-animation: opacite 3s linear forwards;
   animation: opacite 3s linear forwards;
 }
 
 .container {
-  -webkit-animation: opacite 3s ease-in forwards reverse 3s;
   animation: opacite 3s ease-in forwards reverse 3s;
 }
 
@@ -142,54 +140,8 @@ body > :not(.container) {
   top: calc(45% - 60px);
   left: calc(50% - 60px);
   position: fixed;
-  -webkit-animation: rotation 3s linear infinite;
   animation: rotation 3s linear infinite;
-  -webkit-animation-direction: reverse;
   animation-direction: reverse;
-}
-
-/*BARRE DE NAVIGATION*/
-.nav_logo {
-  width: 165px;
-  margin: 20px auto;
-  display: block;
-}
-
-/*HEADER*/
-header {
-  width: 100%;
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header .entree_ville {
-  width: 100%;
-  font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
-  padding-top: 20px;
-  box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.33);
-  height: 60px;
-  background-color: #e6e6e6;
-  text-align: center;
-}
-header .entree_ville .icone_lieu {
-  font-size: 2rem;
-  padding-right: 10px;
-}
-header h1 {
-  font-size: 2.3rem;
-  text-align: center;
-  padding: 0 70px;
-  margin-top: 50px;
-  margin-bottom: 0;
-}
-header p {
-  font-weight: 300;
-  font-size: 1.6rem;
-  color: gray;
-  text-align: center;
-  padding: 0 20px;
 }
 
 /*FONCTIONNEMENT*/
@@ -256,9 +208,48 @@ header p {
   color: #9356dc;
 }
 
-h2 {
+/*BARRE DE NAVIGATION*/
+.nav_logo {
+  width: 165px;
+  margin: 20px auto;
+  display: block;
+}
+
+/*HEADER*/
+header {
+  width: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .entree_ville {
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  padding-top: 20px;
+  box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.33);
+  height: 60px;
+  background-color: #e6e6e6;
+  text-align: center;
+}
+header .entree_ville .icone_lieu {
+  font-size: 2rem;
+  padding-right: 10px;
+}
+header h1 {
   font-size: 2.3rem;
-  align-self: flex-start;
+  text-align: center;
+  padding: 0 70px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+header p {
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: gray;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .restaurants {
@@ -286,6 +277,46 @@ h2 {
     justify-content: space-between;
     column-gap: 20px;
   }
+}
+
+footer {
+  color: white;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+}
+footer img {
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 40px;
+  filter: invert(100%);
+}
+footer a {
+  color: white;
+  line-height: 1.8;
+  font-size: 1.6rem;
+}
+
+a,
+ul {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  color: black;
+}
+li i {
+  width: 10px;
+  font-size: 1.4rem;
+  color: white;
+  margin-right: 10px;
+}
+
+h2 {
+  font-size: 2.3rem;
+  align-self: flex-start;
 }
 
 .pages {
@@ -396,41 +427,6 @@ h2 {
   object-position: 50% 50%;
 }
 
-footer {
-  color: white;
-  background-color: #333333;
-  display: flex;
-  flex-direction: column;
-}
-footer img {
-  width: 100px;
-  margin-top: 30px;
-  margin-left: 40px;
-  filter: invert(100%);
-}
-footer a {
-  color: white;
-  line-height: 1.8;
-  font-size: 1.6rem;
-}
-
-a,
-ul {
-  list-style: none;
-  text-decoration: none;
-  color: black;
-}
-
-li {
-  color: black;
-}
-li i {
-  width: 10px;
-  font-size: 1.4rem;
-  color: white;
-  margin-right: 10px;
-}
-
 .header_pages {
   background-color: white;
   position: relative;
@@ -484,6 +480,7 @@ figure {
 .titre_pages .pages_animation_coeur {
   position: relative;
   cursor: pointer;
+  margin-right: 0;
 }
 .titre_pages .pages_icone_vide {
   color: gray;
@@ -504,15 +501,10 @@ figure {
   top: 0px;
   right: 20px;
   opacity: 0;
-  transition: opacity ease 0.5s;
+  transition: opacity 0.5s ease-in;
 }
 .titre_pages .pages_animation_coeur:hover .pages_icone_plein {
   opacity: 1;
-}
-
-.article .nom,
-.article .prix {
-  animation: opacite linear 2s;
 }
 
 .entrees,
@@ -576,7 +568,6 @@ article .nom {
   padding-left: 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
 }
 @media screen and (max-width: 380px) {
   article .nom {
@@ -594,6 +585,15 @@ article .nom span {
   font-weight: 100;
   flex-grow: 1;
 }
+@media screen and (max-width: 400px) {
+  article .nom span {
+    width: 200px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 article .prix {
   font-size: 1.4rem;
   font-weight: 500;
@@ -601,6 +601,7 @@ article .prix {
   margin-bottom: 15px;
   position: absolute;
   right: 0;
+  transition: right 0.3s;
 }
 article .validation_du_plat {
   height: 100%;
@@ -617,43 +618,24 @@ article .validation_du_plat .icone_validation {
   width: 20px;
   fill: white;
   position: relative;
-  top: calc(50% - 1rem);
-  left: calc(50% - 1rem);
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
   transform: rotate(0);
   transition: transform 0.5s;
 }
 
-@media screen and (max-width: 400px) and (max-width: 400px) {
-  article span {
-    width: 200px;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
 article:hover .validation_du_plat {
   width: 17%;
   display: block;
-  z-index: 1;
   right: 0;
 }
 article:hover .validation_du_plat .icone_validation {
   width: 20px;
-  z-index: 1;
   transform: rotate(360deg);
 }
 
-@keyframes decalage_gauche_prix {
-  0% {
-    right: 0;
-  }
-  100% {
-    right: 15%;
-  }
-}
 article:hover .prix {
-  animation: decalage_gauche_prix 0.2s linear forwards;
+  right: 15%;
 }
 
 /*# sourceMappingURL=style.css.map */

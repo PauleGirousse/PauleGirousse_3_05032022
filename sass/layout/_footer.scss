@@ -1,0 +1,32 @@
+// FOOTER
+footer {
+  color: white;
+  background-color: lighten($color: black, $amount: 20%);
+  @include flex_column;
+  img {
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 40px;
+    filter: invert(100%);
+  }
+  a {
+    color: white;
+    line-height: 1.8;
+    font-size: 1.6rem;
+  }
+}
+a,
+ul {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+li {
+  color: black;
+  i {
+    width: 10px;
+    font-size: 1.4rem;
+    color: white;
+    margin-right: 10px;
+  }
+}

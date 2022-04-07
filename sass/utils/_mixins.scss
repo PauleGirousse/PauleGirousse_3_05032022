@@ -14,9 +14,10 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-@mixin lighten($color) {
-  background-color: lighten($color, $amount: 30%);
-}
+// @mixin lighten($color, $amount) {
+//   background-color: lighten($color, $amount);
+// }
+
 @mixin breakpoint($name) {
   @if $name == "small" {
     @media screen and (max-width: 400px) {

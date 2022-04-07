@@ -1,10 +1,10 @@
 body > :not(.container) {
   opacity: 0;
-  -webkit-animation: opacite 3s linear forwards;
+  // -webkit-animation: opacite 3s linear forwards;
   animation: opacite 3s linear forwards;
 }
 .container {
-  -webkit-animation: opacite 3s ease-in forwards reverse 3s;
+  // -webkit-animation: opacite 3s ease-in forwards reverse 3s;
   animation: opacite 3s ease-in forwards reverse 3s;
 }
 
@@ -37,8 +37,8 @@ body > :not(.container) {
   top: calc(45% - 60px);
   left: calc(50% - 60px);
   position: fixed;
-  -webkit-animation: rotation 3s linear infinite;
+  // -webkit-animation: rotation 3s linear infinite;
   animation: rotation 3s linear infinite;
-  -webkit-animation-direction: reverse;
+  // -webkit-animation-direction: reverse;
   animation-direction: reverse;
 }

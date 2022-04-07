@@ -10,14 +10,19 @@
   border-radius: 50px;
   border: 1px;
   box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
   margin: 10px auto 7rem auto;
   position: relative;
   z-index: 1;
 
   &:hover,
   &:active {
-    cursor: pointer;
     box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(
+      170deg,
+      lighten($color-secondary, 5%),
+      lighten($color-primary, 5%)
+    );
     &::after {
       opacity: 1;
     }
@@ -30,11 +35,6 @@
     bottom: 0;
     left: 0;
     border-radius: 50px;
-    background: linear-gradient(
-      170deg,
-      lighten($color-secondary, 5),
-      lighten($color-primary, 5)
-    );
     opacity: 0;
     z-index: -1;
     transition: opacity 250ms;

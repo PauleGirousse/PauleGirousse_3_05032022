@@ -6,17 +6,8 @@ $color-secondary-clear: lighten(#ff79da, 5%);
 $color-tertiary: #99e2d0;
 $color-gradient: linear-gradient(170deg, #ff79da 25%, #9356dc);
 
-// $background-color-medium: rgba(0, 0, 0, 0.05);
 $background-color-medium: lighten(black, 90%);
 $background-color-base: lighten(black, 95%);
 
-// $color-icons: rgba(0, 0, 0, 0.5);
 $color-icons: lighten(black, 50%);
-// $font-family-base: "Roboto", sans-serif;
-
-// $image: (
-//   "images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
-//   "images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
-//   "images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg",
-//   "images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-// );
+// $amount: 30%;

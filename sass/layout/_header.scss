@@ -1,0 +1,38 @@
+/*HEADER*/
+header {
+  width: 100%;
+  background-color: lighten($color: black, $amount: 95%);
+  @include flex_column;
+  align-items: center;
+
+  .entree_ville {
+    width: 100%;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    padding-top: 20px;
+
+    box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.33);
+    height: 60px;
+    background-color: $background-color-medium;
+    text-align: center;
+
+    .icone_lieu {
+      font-size: 2rem;
+      padding-right: 10px;
+    }
+  }
+  h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    padding: 0 70px;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+  p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: $color-icons;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
