@@ -23,15 +23,13 @@
       border-radius: 50%;
       display: inline-block;
       margin-left: -0.5rem;
+      padding: 0.1em 0;
       text-align: center;
-
-      padding-top: 0.1em;
     }
     li {
       counter-increment: li;
       height: 70px;
       min-width: 325px;
-
       background-color: $background-color-base;
       box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
       border-radius: 25px;
@@ -41,9 +39,9 @@
       align-items: baseline;
       cursor: pointer;
       p {
+        font-size: 2rem;
         color: $color-icons;
         padding-left: 1.5em;
-        font-size: 2rem;
       }
       h4 {
         font-size: 1.3rem;
@@ -52,7 +50,8 @@
       &:hover,
       &:active {
         // @include lighten($color-primary, $amount);
-        background-color: lighten($color-primary, 30);
+        // background-color: lighten($color-primary, 30);
+        background-color: $color-primary-clear;
         p {
           color: $color-primary;
         }

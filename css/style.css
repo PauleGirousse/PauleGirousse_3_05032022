@@ -67,7 +67,6 @@ body {
   cursor: pointer;
   margin: 10px auto 7rem auto;
   position: relative;
-  z-index: 1;
 }
 @media screen and (min-width: 880px) {
   .btn_action_explorer, .btn_action_commander {
@@ -90,7 +89,6 @@ body {
   left: 0;
   border-radius: 50px;
   opacity: 0;
-  z-index: -1;
   transition: opacity 250ms;
 }
 
@@ -130,8 +128,8 @@ body > :not(.container) {
 }
 
 .cercle {
-  width: 120px;
   height: 120px;
+  width: 120px;
   border-top: 10px solid #ff79da;
   border-right: 10px solid #99e2d0;
   border-bottom: 10px solid #ff79da;
@@ -174,8 +172,8 @@ body > :not(.container) {
   border-radius: 50%;
   display: inline-block;
   margin-left: -0.5rem;
+  padding: 0.1em 0;
   text-align: center;
-  padding-top: 0.1em;
 }
 .fonctionnement ol li {
   counter-increment: li;
@@ -193,16 +191,16 @@ body > :not(.container) {
   cursor: pointer;
 }
 .fonctionnement ol li p {
+  font-size: 2rem;
   color: gray;
   padding-left: 1.5em;
-  font-size: 2rem;
 }
 .fonctionnement ol li h4 {
   font-size: 1.3rem;
   padding-left: 2em;
 }
 .fonctionnement ol li:hover, .fonctionnement ol li:active {
-  background-color: #e4d5f6;
+  background-color: #f2eafb;
 }
 .fonctionnement ol li:hover p, .fonctionnement ol li:active p {
   color: #9356dc;
@@ -245,19 +243,16 @@ header h1 {
   margin-bottom: 0;
 }
 header p {
-  font-weight: 300;
   font-size: 1.6rem;
+  font-weight: 300;
   color: gray;
   text-align: center;
   padding: 0 20px;
 }
 
 .restaurants {
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 50px;
   width: 100%;
+  padding: 50px 20px;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
@@ -350,8 +345,8 @@ h2 {
   width: 80px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #217460;
-  background-color: #71d7be;
+  color: #278870;
+  background-color: #99e2d0;
   padding-top: 7px;
   text-align: center;
   position: absolute;
@@ -626,8 +621,6 @@ article .validation_du_plat .icone_validation {
 
 article:hover .validation_du_plat {
   width: 17%;
-  display: block;
-  right: 0;
 }
 article:hover .validation_du_plat .icone_validation {
   width: 20px;

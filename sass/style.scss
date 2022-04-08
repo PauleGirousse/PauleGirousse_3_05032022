@@ -47,8 +47,10 @@ h2 {
     width: 80px;
     font-size: 1.3rem;
     font-weight: bold;
-    color: darken($color-tertiary, 45);
-    background-color: darken($color-tertiary, 10);
+    // color: darken($color-tertiary, 45);
+    color: $color-tertiary-darker;
+    // background-color: darken($color-tertiary, 10);
+    background-color: $color-tertiary;
     padding-top: 7px;
     text-align: center;
     position: absolute;
@@ -196,13 +198,6 @@ figure {
   }
 }
 
-// .article {
-//   .nom,
-//   .prix {
-//     animation: opacite linear 2s;
-//   }
-// }
-
 .entrees,
 .plats,
 .desserts {
@@ -297,7 +292,6 @@ article {
     background-color: $color-tertiary;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-
     position: absolute;
     right: 0;
 
@@ -318,8 +312,8 @@ article {
 
 article:hover .validation_du_plat {
   width: 17%;
-  display: block;
-  right: 0;
+  // display: block;
+  // right: 0;
 
   .icone_validation {
     width: 20px;

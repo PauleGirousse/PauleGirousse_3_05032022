@@ -1,13 +1,14 @@
 $color-primary: #9356dc;
-$color-primary-clear: lighten(#9356dc, 5%);
+$color-primary-clear: lighten(#9356dc, 35%);
+
 $color-secondary: #ff79da;
-$color-secondary-clear: lighten(#ff79da, 5%);
 
 $color-tertiary: #99e2d0;
+$color-tertiary-darker: darken($color-tertiary, 40);
+
 $color-gradient: linear-gradient(170deg, #ff79da 25%, #9356dc);
 
 $background-color-medium: lighten(black, 90%);
 $background-color-base: lighten(black, 95%);
 
 $color-icons: lighten(black, 50%);
-// $amount: 30%;

@@ -27,8 +27,8 @@ body > :not(.container) {
   }
 }
 .cercle {
-  width: 120px;
   height: 120px;
+  width: 120px;
   border-top: 10px solid $color-secondary;
   border-right: 10px solid $color-tertiary;
   border-bottom: 10px solid $color-secondary;
@@ -37,8 +37,6 @@ body > :not(.container) {
   top: calc(45% - 60px);
   left: calc(50% - 60px);
   position: fixed;
-  // -webkit-animation: rotation 3s linear infinite;
   animation: rotation 3s linear infinite;
-  // -webkit-animation-direction: reverse;
   animation-direction: reverse;
 }
