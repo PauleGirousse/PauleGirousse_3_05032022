@@ -1,7 +1,8 @@
-/*HEADER*/
+/*HEADER DE LA PAGE D ACCUEIL*/
+
 header {
   width: 100%;
-  background-color: lighten($color: black, $amount: 95%);
+  background-color: $background-color-base;
   @include flex_column;
   align-items: center;
 
@@ -35,4 +36,15 @@ header {
     text-align: center;
     padding: 0 20px;
   }
+}
+
+// HEADER DES PAGES DES RESTAURANTS
+
+figure {
+  margin: 0;
+}
+.img_pages {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
 }

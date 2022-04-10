@@ -1,0 +1,126 @@
+// PAGE D ACCUEIL
+
+// RESTAURANTS
+
+h2 {
+  font-size: 2.3rem;
+  align-self: flex-start;
+}
+
+.restaurants {
+  width: 100%;
+  padding: 50px 20px;
+
+  background-color: $background-color-base;
+  @include flex_column;
+  align-items: center;
+
+  .sans_titre {
+    width: 100%;
+    @include flex_column;
+    align-items: center;
+
+    @include breakpoint(medium) {
+      @include flex_row;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+  }
+}
+
+.pages {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 3px 16px 35px -5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  width: 48%;
+  min-width: 335px;
+  max-width: 580px;
+  flex-grow: 1;
+  position: relative;
+  .image_accueil {
+    height: 175px;
+    width: 100%;
+
+    img {
+      height: 175px;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 98%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .img_page2 {
+      object-position: 50% 62%;
+    }
+  }
+  .encadre {
+    height: 30px;
+    width: 80px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $color-tertiary-darker;
+    background-color: $color-tertiary;
+    padding-top: 7px;
+    text-align: center;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+  }
+}
+.legende {
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  @include flex_row;
+  justify-content: space-between;
+  .details_legende {
+    font-size: 1.7rem;
+    font-weight: 100;
+    @include flex_column;
+    margin: 0px 0 15px 0;
+    padding-left: 15px;
+    h3 {
+      font-size: 1.7rem;
+      margin-bottom: 0;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    span {
+      margin-top: 2px;
+    }
+  }
+}
+
+.page2_img {
+  object-position: 50% 50%;
+}
+
+// PAGES des restaurants
+
+.menu {
+  margin-top: -50px;
+  position: relative;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  @include flex_column;
+  background-color: $background-color-base;
+}
+
+.titre_pages {
+  padding-left: 20px;
+  padding-right: 15px;
+  @include flex_row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  h3 {
+    font-size: 2.7rem;
+    margin-top: 40px;
+    padding-right: 20px;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

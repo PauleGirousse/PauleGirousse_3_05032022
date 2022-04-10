@@ -1,0 +1,211 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes opacite {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+// PAGE D ACCUEIL
+
+// LOADING SPINNER
+body > :not(.container) {
+  opacity: 0;
+  animation: opacite 3s linear forwards;
+}
+.container {
+  animation: opacite 3s ease-in forwards reverse 3s;
+}
+
+.loading_spinner {
+  height: 100px;
+  width: 100px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  top: calc(45% - 50px);
+  left: calc(50% - 50px);
+  position: fixed;
+  @include flex_row;
+  justify-content: center;
+  align-items: center;
+  animation: rotation 3s linear infinite;
+  i {
+    font-size: 50px;
+    color: $color-tertiary;
+    display: block;
+  }
+}
+.cercle {
+  height: 120px;
+  width: 120px;
+  border-top: 10px solid $color-secondary;
+  border-right: 10px solid $color-tertiary;
+  border-bottom: 10px solid $color-secondary;
+  border-left: 10px solid $color-tertiary;
+  border-radius: 50%;
+  top: calc(45% - 60px);
+  left: calc(50% - 60px);
+  position: fixed;
+  animation: rotation 3s linear infinite;
+  animation-direction: reverse;
+}
+
+// PAGE DES RESTAURANTS
+
+// ANIMATION DES BLOCS ENTREES PLATS DESSERTS
+.entrees,
+.plats,
+.desserts {
+  margin: 0 12.5px;
+  margin-bottom: 40px;
+  opacity: 0;
+
+  & > p {
+    font-weight: 100;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    position: relative;
+    &:after {
+      content: "";
+      width: 4rem;
+      border-bottom: 4px solid $color-tertiary;
+      position: absolute;
+      bottom: -10px;
+      left: 10px;
+    }
+  }
+}
+
+.entrees {
+  animation: opacite 2s linear forwards;
+}
+.plats {
+  animation: opacite 2s linear forwards 1s;
+}
+.desserts {
+  animation: opacite 2s linear forwards 2s;
+}
+
+// TRANSITION ENTRE LES 2 COEURS SUR LA PAGE D ACCUEIL
+
+.animation_coeur {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.icone-vide {
+  font-size: 2rem;
+  color: $color-icons;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+}
+.animation_coeur:hover .icone-vide {
+  opacity: 0;
+}
+.icone-plein {
+  font-size: 2rem;
+  color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.animation_coeur:hover .icone-plein {
+  opacity: 1;
+}
+
+// TRANSITION ENTRE LES 2 COEURS SUR LES PAGES DES RESTAURANTS
+
+.pages_animation_coeur {
+  position: relative;
+  cursor: pointer;
+  margin-right: 0;
+}
+.pages_icone-vide {
+  color: $color-icons;
+  margin-right: 20px;
+  font-size: 3rem;
+  z-index: 1;
+}
+.pages_animation_coeur:hover .pages_icone-vide {
+  opacity: 0;
+}
+.pages_icone-plein {
+  font-size: 3rem;
+  color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.pages_animation_coeur:hover .pages_icone-plein {
+  opacity: 1;
+}
+
+// ANIMATION DE VALIDATION DU PLAT
+
+.prix {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-right: 30px;
+  margin-bottom: 15px;
+  position: absolute;
+  right: 0;
+  transition: right 0.3s;
+}
+.validation_du_plat {
+  height: 100%;
+  width: 0;
+  background-color: $color-tertiary;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: 0;
+  transition: width 0.3s;
+
+  .icone_validation {
+    height: 20px;
+    width: 20px;
+    fill: white;
+    position: relative;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    transform: rotate(0);
+    transition: transform 0.5s;
+  }
+}
+
+article:hover .validation_du_plat {
+  width: 17%;
+
+  .icone_validation {
+    width: 20px;
+    transform: rotate(360deg);
+  }
+}
+
+article:hover .prix {
+  right: 15%;
+}

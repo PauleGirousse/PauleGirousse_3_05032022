@@ -1,6 +1,21 @@
-/*BARRE DE NAVIGATION*/
+/*BARRE DE NAVIGATION de la page d'accueil*/
+
 .nav_logo {
   width: 165px;
   margin: 20px auto;
   display: block;
+}
+
+// Icone flèche en supplément sur les pages des restaurants
+
+.header_pages {
+  background-color: white;
+  position: relative;
+  .icone_fleche {
+    width: 20px;
+    font-size: 2rem;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+  }
 }

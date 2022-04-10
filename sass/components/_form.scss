@@ -7,8 +7,6 @@
     list-style: none;
     counter-reset: li;
     padding-left: 5px;
-
-    // @media screen and (min-width: 1000px) {
     @include breakpoint(large) {
       @include flex_row;
       column-gap: 40px;
@@ -16,14 +14,15 @@
     }
     li::before {
       content: counter(li);
-      height: 20px;
-      width: 20px;
+      height: 25px;
+      width: 25px;
+      font-size: 16px;
       color: white;
       background-color: $color-primary;
       border-radius: 50%;
       display: inline-block;
-      margin-left: -0.5rem;
-      padding: 0.1em 0;
+      margin-left: -12.5px;
+      padding: 0.2em 0;
       text-align: center;
     }
     li {
@@ -49,8 +48,6 @@
       }
       &:hover,
       &:active {
-        // @include lighten($color-primary, $amount);
-        // background-color: lighten($color-primary, 30);
         background-color: $color-primary-clear;
         p {
           color: $color-primary;

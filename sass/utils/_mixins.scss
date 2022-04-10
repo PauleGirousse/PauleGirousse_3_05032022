@@ -1,8 +1,4 @@
-// @mixin flex_middle {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+// Mixins pour les Flexbox
 
 @mixin flex_column {
   display: flex;
@@ -14,16 +10,25 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-// @mixin lighten($color, $amount) {
-//   background-color: lighten($color, $amount);
-// }
 
-@mixin breakpoint($name) {
-  @if $name == "small" {
+// Breakpoint pour les versions mobile
+
+@mixin mobile($name) {
+  @if $name == "smaller" {
+    @media screen and (max-width: 380px) {
+      @content;
+    }
+  } @else if $name == "small" {
     @media screen and (max-width: 400px) {
       @content;
     }
-  } @else if $name == "medium" {
+  }
+}
+
+// Breakpoint pour les versions tablettes et desktop
+
+@mixin breakpoint($name) {
+  @if $name == "medium" {
     @media screen and (min-width: 880px) {
       @content;
     }

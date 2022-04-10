@@ -8,7 +8,11 @@ $color-tertiary-darker: darken($color-tertiary, 40);
 
 $color-gradient: linear-gradient(170deg, #ff79da 25%, #9356dc);
 
+// Fond gris d'entree ville
 $background-color-medium: lighten(black, 90%);
+
+// Fond gris de base
 $background-color-base: lighten(black, 95%);
 
+// Couleur des icones
 $color-icons: lighten(black, 50%);
