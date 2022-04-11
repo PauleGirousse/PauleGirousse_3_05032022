@@ -1,7 +1,7 @@
 // FOOTER
 footer {
   color: white;
-  background-color: lighten($color: black, $amount: 20%);
+  background-color: $background-color-dark;
   @include flex_column;
   img {
     width: 100px;

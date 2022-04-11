@@ -16,11 +16,13 @@
 }
 body > :not(.container) {
   opacity: 0;
-  animation: opacite 3s linear forwards;
+  animation: opacite 3s ease-out forwards;
 }
 
 .container {
-  animation: opacite 3s ease-in forwards reverse 3s;
+  z-index: 1;
+  position: absolute;
+  animation: opacite 3s ease-out forwards reverse;
 }
 
 .loading_spinner {
@@ -272,7 +274,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  align-items: baseline;
+  align-items: center;
   cursor: pointer;
 }
 .fonctionnement ol li p {
